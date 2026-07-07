@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helios — Case Study · Axel Galindo</title>
+  <meta name="description" content="Case study for Helios: an AI-powered recruitment platform designed and built by Axel Galindo as UX/UI Designer and Technical Lead — Bubble.io + OpenAI." />
+  <meta name="theme-color" content="#0A0A0B" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="relative overflow-x-hidden">
+
+  <div class="pointer-events-none fixed inset-0 z-0 bg-grid"></div>
+  <div class="pointer-events-none fixed inset-0 z-0 bg-noise"></div>
+
+
+  <!-- ============================================ NAV ============================================ -->
+  <header class="nav-blur fixed top-0 left-0 right-0 z-50" id="nav" role="banner">
+    <nav class="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between" aria-label="Primary">
+      <a href="index.html" class="flex items-center gap-2 group" aria-label="Back to portfolio">
+        <span class="w-7 h-7 rounded-md border border-[var(--border-strong)] flex items-center justify-center mono text-[11px] font-medium bg-gradient-to-br from-white/5 to-white/0">AG</span>
+        <span class="text-sm font-medium tracking-tight hidden sm:inline">Axel Galindo</span>
+      </a>
+
+      <a href="index.html" class="btn btn-ghost" aria-label="Back to portfolio">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to portfolio
+      </a>
+    </nav>
+  </header>
+
+
+  <main class="relative z-10 pt-32 md:pt-40">
+
+    <!-- ============================================ HERO ============================================ -->
+    <section class="relative pb-16 md:pb-24" aria-labelledby="case-heading">
+      <div class="pointer-events-none absolute inset-0 overflow-hidden">
+        <div class="orb orb-navy"         style="width: 520px; height: 520px; top: -10%; left: -10%;"></div>
+        <div class="orb orb-brand-violet" style="width: 440px; height: 440px; top: 15%; right: -10%;"></div>
+      </div>
+
+      <div class="relative max-w-5xl mx-auto px-6 md:px-10">
+        <p class="eyebrow reveal">Case Study · 02</p>
+        <h1 id="case-heading" class="mt-4 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl reveal">
+          Helios
+        </h1>
+        <p class="mt-6 text-lg md:text-2xl max-w-2xl leading-snug reveal" style="color: var(--ink-muted);">
+          An <span class="italic-serif" style="color: var(--ink);">AI-powered</span> recruitment platform — designed, architected and built end to end.
+        </p>
+
+        <!-- Meta grid -->
+        <div class="mt-14 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 reveal" style="transition-delay: 0.1s;">
+          <div>
+            <p class="eyebrow">Role</p>
+            <p class="mt-2 text-sm md:text-base" style="color: var(--ink);">UX/UI Designer →<br>Technical Lead</p>
+          </div>
+          <div>
+            <p class="eyebrow">Stack</p>
+            <p class="mt-2 text-sm md:text-base" style="color: var(--ink);">Bubble.io · OpenAI · Figma</p>
+          </div>
+          <div>
+            <p class="eyebrow">Industry</p>
+            <p class="mt-2 text-sm md:text-base" style="color: var(--ink);">HR Tech · AI SaaS</p>
+          </div>
+          <div>
+            <p class="eyebrow">Year</p>
+            <p class="mt-2 text-sm md:text-base" style="color: var(--ink);">2025 — Present</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ HERO COVER ============================================ -->
+    <section class="relative mb-16 md:mb-32">
+      <div class="max-w-6xl mx-auto px-6 md:px-10">
+        <!-- REPLACE with hero screenshot:
+             <img src="assets/helios-hero.jpg" alt="Helios platform" class="w-full rounded-2xl border border-[var(--border)]" /> -->
+        <div class="case-hero-cover reveal" style="background:
+              radial-gradient(ellipse at 70% 30%, rgba(0, 55, 142, 0.7) 0%, transparent 50%),
+              radial-gradient(ellipse at 25% 75%, rgba(121, 108, 249, 0.6) 0%, transparent 55%),
+              radial-gradient(ellipse at 90% 90%, rgba(44, 210, 255, 0.35) 0%, transparent 45%),
+              linear-gradient(135deg, #001F5E 0%, #0a1338 100%);">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="italic-serif text-6xl md:text-9xl" style="color: rgba(255,255,255,0.15); letter-spacing: -0.03em;">Helios</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ OVERVIEW ============================================ -->
+    <section class="relative py-16 md:py-24">
+      <div class="max-w-4xl mx-auto px-6 md:px-10">
+        <div class="reveal">
+          <p class="eyebrow">Overview</p>
+          <h2 class="mt-4 font-display text-3xl md:text-5xl">
+            One person, <span class="italic-serif">two hats</span>:<br>
+            designer and builder.
+          </h2>
+        </div>
+
+        <div class="mt-10 space-y-5 text-lg leading-relaxed max-w-3xl reveal" style="color: var(--ink-muted);">
+          <p>
+            Helios is an early-stage recruitment platform that uses AI to connect candidates and companies — analyzing CVs, generating structured feedback, and matching talent to open positions intelligently.
+          </p>
+          <p>
+            I joined as <span style="color: var(--ink);">UX/UI Designer</span> to shape the product from research to interface, and grew into the <span style="color: var(--ink);">Technical Lead</span> role — owning the platform architecture and building it hands-on in Bubble.io with OpenAI integrations. This case reflects that dual journey: the same person who drew the wireframes shipped the working product.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ THE CHALLENGE ============================================ -->
+    <section class="relative py-16 md:py-24 border-t border-[var(--border)]">
+      <div class="max-w-6xl mx-auto px-6 md:px-10">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-10 md:gap-16">
+          <div class="reveal">
+            <p class="eyebrow">The Challenge</p>
+            <h2 class="mt-4 font-display text-3xl md:text-4xl">
+              From zero to a working <span class="italic-serif">MVP</span>.
+            </h2>
+          </div>
+
+          <div class="space-y-6 reveal" style="transition-delay: 0.1s;">
+            <p class="text-lg leading-relaxed" style="color: var(--ink-muted);">
+              Early-stage startups don't have the luxury of separate design and engineering tracks. Helios needed someone who could <span style="color: var(--ink);">design the experience and build it</span> — fast, without sacrificing craft.
+            </p>
+
+            <ul class="space-y-4">
+              <li class="flex gap-4 pt-6 border-t border-[var(--border)]">
+                <span class="mono text-[11px] tracking-wider shrink-0 pt-1" style="color: var(--ink-faint);">01</span>
+                <div>
+                  <h3 class="font-display text-lg mb-1">Three user roles, one platform</h3>
+                  <p class="text-[15px] leading-relaxed" style="color: var(--ink-muted);">Candidates, companies and recruiters/coaches — each with distinct flows, dashboards and permissions.</p>
+                </div>
+              </li>
+              <li class="flex gap-4 pt-6 border-t border-[var(--border)]">
+                <span class="mono text-[11px] tracking-wider shrink-0 pt-1" style="color: var(--ink-faint);">02</span>
+                <div>
+                  <h3 class="font-display text-lg mb-1">AI as a core feature, not a gimmick</h3>
+                  <p class="text-[15px] leading-relaxed" style="color: var(--ink-muted);">CV analysis, feedback generation and intelligent matching needed careful prompt design and clear UX around AI outputs.</p>
+                </div>
+              </li>
+              <li class="flex gap-4 pt-6 border-t border-[var(--border)]">
+                <span class="mono text-[11px] tracking-wider shrink-0 pt-1" style="color: var(--ink-faint);">03</span>
+                <div>
+                  <h3 class="font-display text-lg mb-1">No-code at production quality</h3>
+                  <p class="text-[15px] leading-relaxed" style="color: var(--ink-muted);">Bubble.io architecture that stays maintainable as the product scales — data types, workflows, reusable elements and API connections.</p>
+                </div>
+              </li>
+              <li class="flex gap-4 pt-6 border-t border-[var(--border)]">
+                <span class="mono text-[11px] tracking-wider shrink-0 pt-1" style="color: var(--ink-faint);">04</span>
+                <div>
+                  <h3 class="font-display text-lg mb-1">Leading while building</h3>
+                  <p class="text-[15px] leading-relaxed" style="color: var(--ink-muted);">Defining standards, documenting decisions, estimating roadmaps and onboarding teammates on no-code best practices.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ DESIGN SYSTEM ============================================ -->
+    <section class="relative py-16 md:py-24 border-t border-[var(--border)]">
+      <div class="max-w-6xl mx-auto px-6 md:px-10">
+        <div class="reveal mb-12 md:mb-16 max-w-3xl">
+          <p class="eyebrow">Visual Language</p>
+          <h2 class="mt-4 font-display text-3xl md:text-5xl">
+            A brand system built<br>for <span class="italic-serif">trust and clarity</span>.
+          </h2>
+          <p class="mt-6 text-lg leading-relaxed" style="color: var(--ink-muted);">
+            I defined Helios' visual identity: a deep navy foundation that communicates professionalism, energized by cyan and green for action and success states — and a dedicated violet reserved exclusively for AI-powered features, so users always know when the machine is speaking.
+          </p>
+        </div>
+
+        <!-- Brand palette -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4 reveal">
+          <div>
+            <div class="swatch" style="background: #001F5E;"></div>
+            <p class="mono text-[11px] mt-3" style="color: var(--ink);">#001F5E</p>
+            <p class="mono text-[10px] mt-1 tracking-wider uppercase" style="color: var(--ink-faint);">Deep Navy · Core</p>
+          </div>
+          <div>
+            <div class="swatch" style="background: #00378E;"></div>
+            <p class="mono text-[11px] mt-3" style="color: var(--ink);">#00378E</p>
+            <p class="mono text-[10px] mt-1 tracking-wider uppercase" style="color: var(--ink-faint);">Azure · Primary</p>
+          </div>
+          <div>
+            <div class="swatch" style="background: #2CD2FF;"></div>
+            <p class="mono text-[11px] mt-3" style="color: var(--ink);">#2CD2FF</p>
+            <p class="mono text-[10px] mt-1 tracking-wider uppercase" style="color: var(--ink-faint);">Cyan · Action</p>
+          </div>
+          <div>
+            <div class="swatch" style="background: #64F495;"></div>
+            <p class="mono text-[11px] mt-3" style="color: var(--ink);">#64F495</p>
+            <p class="mono text-[10px] mt-1 tracking-wider uppercase" style="color: var(--ink-faint);">Green · Success</p>
+          </div>
+          <div>
+            <div class="swatch" style="background: #796CF9;"></div>
+            <p class="mono text-[11px] mt-3" style="color: var(--ink);">#796CF9</p>
+            <p class="mono text-[10px] mt-1 tracking-wider uppercase" style="color: var(--ink-faint);">Violet · AI Features</p>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-2 reveal">
+          <span class="chip">Typeface: Manrope</span>
+          <span class="chip">Professional yet approachable</span>
+          <span class="chip">Digitally native voice</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ WHAT I BUILT ============================================ -->
+    <section class="relative py-16 md:py-24 border-t border-[var(--border)]">
+      <div class="max-w-6xl mx-auto px-6 md:px-10">
+        <div class="reveal mb-12 md:mb-16 max-w-3xl">
+          <p class="eyebrow">Scope</p>
+          <h2 class="mt-4 font-display text-3xl md:text-5xl">
+            Designed <span class="italic-serif">and</span> shipped.
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+          <div class="border border-[var(--border)] rounded-2xl p-6 bg-white/[0.015] reveal">
+            <p class="mono text-[11px] tracking-wider uppercase mb-3" style="color: #796CF9;">AI</p>
+            <h3 class="font-display text-lg mb-2">CV analysis &amp; matching</h3>
+            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">OpenAI integration for parsing CVs, generating candidate feedback and matching talent to positions — prompts, models and analysis flows.</p>
+          </div>
+          <div class="border border-[var(--border)] rounded-2xl p-6 bg-white/[0.015] reveal" style="transition-delay: 0.05s;">
+            <p class="mono text-[11px] tracking-wider uppercase mb-3" style="color: #2CD2FF;">UX/UI</p>
+            <h3 class="font-display text-lg mb-2">Multi-role dashboards</h3>
+            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">Wireframes and final UI for candidate, company and coach views — open positions, position detail and progress tracking.</p>
+          </div>
+          <div class="border border-[var(--border)] rounded-2xl p-6 bg-white/[0.015] reveal" style="transition-delay: 0.10s;">
+            <p class="mono text-[11px] tracking-wider uppercase mb-3" style="color: #2CD2FF;">Build</p>
+            <h3 class="font-display text-lg mb-2">CV rendering engine</h3>
+            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">Dynamic CV display and download inside Bubble using structured data, custom delimiters and JavaScript parsing.</p>
+          </div>
+          <div class="border border-[var(--border)] rounded-2xl p-6 bg-white/[0.015] reveal" style="transition-delay: 0.15s;">
+            <p class="mono text-[11px] tracking-wider uppercase mb-3" style="color: #2CD2FF;">Build</p>
+            <h3 class="font-display text-lg mb-2">Notification system</h3>
+            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">Floating notification panel in the platform header with conditional data loading and bulk mark-as-read workflows.</p>
+          </div>
+          <div class="border border-[var(--border)] rounded-2xl p-6 bg-white/[0.015] reveal" style="transition-delay: 0.20s;">
+            <p class="mono text-[11px] tracking-wider uppercase mb-3" style="color: #2CD2FF;">Build</p>
+            <h3 class="font-display text-lg mb-2">Job description editor</h3>
+            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">Two-panel editor with live preview — companies write postings and see the final layout render in real time.</p>
+          </div>
+          <div class="border border-[var(--border)] rounded-2xl p-6 bg-white/[0.015] reveal" style="transition-delay: 0.25s;">
+            <p class="mono text-[11px] tracking-wider uppercase mb-3" style="color: #64F495;">Growth</p>
+            <h3 class="font-display text-lg mb-2">Premium landing page</h3>
+            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">Conversion-focused landing for the premium service targeting company users, on-brand and structured for clarity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ KEY SCREENS ============================================ -->
+    <section class="relative py-16 md:py-24 border-t border-[var(--border)]">
+      <div class="max-w-6xl mx-auto px-6 md:px-10">
+        <div class="reveal mb-12 md:mb-16">
+          <p class="eyebrow">Interfaces</p>
+          <h2 class="mt-4 font-display text-3xl md:text-5xl">
+            Key <span class="italic-serif">screens</span>.
+          </h2>
+        </div>
+
+        <!-- REPLACE placeholders with screenshots:
+             <img src="assets/helios-01.jpg" alt="Dashboard" class="w-full h-full object-cover" /> -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div class="screenshot-frame reveal" data-label="01 · COACH DASHBOARD">
+            <span class="placeholder-text">Screenshot placeholder</span>
+          </div>
+          <div class="screenshot-frame reveal" data-label="02 · OPEN POSITIONS" style="transition-delay: 0.1s;">
+            <span class="placeholder-text">Screenshot placeholder</span>
+          </div>
+          <div class="screenshot-frame reveal" data-label="03 · CV ANALYSIS · AI" style="transition-delay: 0.2s;">
+            <span class="placeholder-text">Screenshot placeholder</span>
+          </div>
+          <div class="screenshot-frame reveal" data-label="04 · POSITION DETAIL" style="transition-delay: 0.3s;">
+            <span class="placeholder-text">Screenshot placeholder</span>
+          </div>
+        </div>
+
+        <p class="mt-8 mono text-[11px] tracking-wider text-center reveal" style="color: var(--ink-faint);">
+          Platform in active development — screens shown reflect the MVP stage.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ============================================ OUTCOME ============================================ -->
+    <section class="relative py-16 md:py-24 border-t border-[var(--border)]">
+      <div class="max-w-6xl mx-auto px-6 md:px-10">
+        <div class="reveal mb-12 md:mb-16 max-w-3xl">
+          <p class="eyebrow">Outcome</p>
+          <h2 class="mt-4 font-display text-3xl md:text-5xl">
+            A validated MVP,<br>built to <span class="italic-serif">keep evolving</span>.
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4 md:gap-6">
+          <div class="metric-card reveal">
+            <div class="metric-value">3</div>
+            <div class="metric-label">User roles · candidate, company, coach</div>
+          </div>
+          <div class="metric-card reveal" style="transition-delay: 0.1s;">
+            <div class="metric-value">Design → Build</div>
+            <div class="metric-label">Full ownership, research to production</div>
+          </div>
+          <div class="metric-card reveal" style="transition-delay: 0.2s;">
+            <div class="metric-value">AI-native</div>
+            <div class="metric-label">OpenAI at the core of the product</div>
+          </div>
+        </div>
+
+        <p class="mt-12 text-lg leading-relaxed max-w-3xl reveal" style="color: var(--ink-muted);">
+          Helios is in continuous validation — testing features, gathering feedback and refining the platform ahead of scale. As Technical Lead I keep translating business needs into clear tasks, estimations and roadmaps, while supporting the team's growth in no-code development.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ============================================ NEXT CASE ============================================ -->
+    <section class="relative py-24 md:py-32 border-t border-[var(--border)]">
+      <div class="max-w-6xl mx-auto px-6 md:px-10">
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+          <a href="qira-pagos.html" class="group border border-[var(--border)] rounded-2xl p-8 bg-white/[0.015] hover:bg-white/[0.03] hover:border-[var(--border-strong)] transition-all">
+            <p class="eyebrow flex items-center gap-2">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Previous case
+            </p>
+            <p class="mt-3 font-display text-xl md:text-2xl">Qira Pagos</p>
+            <p class="mt-2 text-sm" style="color: var(--ink-muted);">Agro fintech wallet</p>
+          </a>
+          <a href="radium-rocket.html" class="group border border-[var(--border)] rounded-2xl p-8 bg-white/[0.015] hover:bg-white/[0.03] hover:border-[var(--border-strong)] transition-all text-right">
+            <p class="eyebrow flex items-center gap-2 justify-end">
+              Next case
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </p>
+            <p class="mt-3 font-display text-xl md:text-2xl group-hover:translate-x-1 transition-transform">Radium Rocket</p>
+            <p class="mt-2 text-sm" style="color: var(--ink-muted);">Agency client work</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ CTA FOOTER ============================================ -->
+    <section class="relative py-24 md:py-32 overflow-hidden border-t border-[var(--border)]">
+      <div class="pointer-events-none absolute inset-0">
+        <div class="orb orb-brand-violet" style="width: 600px; height: 600px; top: 20%; left: 50%; transform: translateX(-50%); opacity: 0.3;"></div>
+      </div>
+      <div class="relative max-w-4xl mx-auto px-6 md:px-10 text-center">
+        <h2 class="font-display text-4xl md:text-6xl reveal">
+          Want to <span class="italic-serif">talk</span> about a project?
+        </h2>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-3 reveal">
+          <a href="mailto:axelgalindo1998@gmail.com" class="btn btn-primary">
+            Get in touch
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="index.html" class="btn btn-ghost">Back to portfolio</a>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="relative border-t py-10" style="border-color: var(--border);">
+      <div class="max-w-6xl mx-auto px-6 md:px-10 flex flex-wrap items-center justify-between gap-4">
+        <p class="mono text-[11px] tracking-wider" style="color: var(--ink-faint);">© 2026 — AXEL GALINDO DALAISÓN</p>
+        <p class="mono text-[11px] tracking-wider" style="color: var(--ink-faint);">Designed &amp; built in Rosario, AR</p>
+      </div>
+    </footer>
+
+  </main>
+
+
+  <script>
+    const nav = document.getElementById('nav');
+    const onScroll = () => { if (window.scrollY > 12) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
