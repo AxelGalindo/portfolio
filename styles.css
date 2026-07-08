@@ -118,11 +118,11 @@ body {
 .nav-blur {
   backdrop-filter: saturate(180%) blur(18px);
   -webkit-backdrop-filter: saturate(180%) blur(18px);
-  background: rgba(10, 10, 11, 0.6);
+  background: rgba(47, 47, 48, 0.6);
   border-bottom: 1px solid transparent;
   transition: border-color 300ms ease, background 300ms ease;
 }
-.nav-blur.scrolled { background: rgba(10, 10, 11, 0.78); border-bottom: 1px solid var(--border); }
+.nav-blur.scrolled { background: rgba(47, 47, 48, 0.78); border-bottom: 1px solid var(--border); }
 .nav-link { position: relative; color: var(--ink-muted); font-size: 13.5px; transition: color 200ms ease; }
 .nav-link:hover { color: var(--ink); }
 .nav-link::after { content: ''; position: absolute; left: 0; bottom: -4px; height: 1px; width: 0; background: var(--ink); transition: width 300ms ease; }
@@ -139,6 +139,28 @@ body {
   color: var(--ink-muted);
   background: rgba(255, 255, 255, 0.02);
 }
+
+/* Back to top floating button (injected by ui.js) */
+.back-to-top {
+  position: fixed;
+  right: 24px; bottom: 24px;
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: rgba(47, 47, 48, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ededed;
+  cursor: pointer;
+  z-index: 60;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 300ms ease, transform 300ms ease, background 200ms ease;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-to-top:hover { background: rgba(70, 70, 72, 0.85); }
 
 /* Scroll reveal */
 .reveal {
