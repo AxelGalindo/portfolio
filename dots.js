@@ -19,7 +19,8 @@
   const HOT_ALPHA = 0.75;
   const EASE = 0.12;           // spring-back speed
   const LIGHT_RGB = [244, 244, 245];  // light section background
-  const FADE = 180;            // px of soft transition into dark sections
+  const FADE_OUT = 240;        // px of transition reaching into the dark gap
+  const FADE_IN = 160;         // px of transition inside the light section
 
   let dots = [];
   let width = 0, height = 0, dpr = 1;
@@ -47,28 +48,41 @@
     render(true);
   }
 
-  // 0 = dark zone, 1 = fully inside a light section (smooth ramp across FADE px)
+  // 0 = dark zone, 1 = fully inside a light section.
+  // The ramp starts FADE_OUT px before the section edge and completes
+  // FADE_IN px inside it, using smoothstep for an even gentler blend.
+  function ramp(x) {
+    const t = Math.min(1, Math.max(0, x));
+    return t * t * (3 - 2 * t);
+  }
   function lightness(y, rects) {
     let t = 0;
+    const span = FADE_OUT + FADE_IN;
     for (const r of rects) {
-      if (y < r.top - FADE || y > r.bottom + FADE) continue;
-      const inTop = (y - (r.top - FADE)) / FADE;
-      const inBottom = ((r.bottom + FADE) - y) / FADE;
-      t = Math.max(t, Math.min(1, inTop, inBottom));
+      if (y < r.top - FADE_OUT || y > r.bottom + FADE_OUT) continue;
+      const inTop = (y - (r.top - FADE_OUT)) / span;
+      const inBottom = ((r.bottom + FADE_OUT) - y) / span;
+      t = Math.max(t, Math.min(ramp(inTop), ramp(inBottom)));
     }
     return t;
   }
 
   function paintLightZones(rects) {
+    const span = FADE_OUT + FADE_IN;
     for (const r of rects) {
-      const top = r.top - FADE, bottom = r.bottom + FADE;
+      const top = r.top - FADE_OUT, bottom = r.bottom + FADE_OUT;
       if (bottom < 0 || top > height) continue;
       const g = ctx.createLinearGradient(0, top, 0, bottom);
-      const span = bottom - top;
-      const f = Math.min(FADE / span, 0.49);
+      const total = bottom - top;
+      const f = Math.min(span / total, 0.49);
+      // smoothstep approximated with intermediate stops
       g.addColorStop(0, 'rgba(244,244,245,0)');
+      g.addColorStop(f * 0.35, 'rgba(244,244,245,0.2)');
+      g.addColorStop(f * 0.65, 'rgba(244,244,245,0.72)');
       g.addColorStop(f, 'rgba(244,244,245,1)');
       g.addColorStop(1 - f, 'rgba(244,244,245,1)');
+      g.addColorStop(1 - f * 0.65, 'rgba(244,244,245,0.72)');
+      g.addColorStop(1 - f * 0.35, 'rgba(244,244,245,0.2)');
       g.addColorStop(1, 'rgba(244,244,245,0)');
       ctx.fillStyle = g;
       ctx.fillRect(0, Math.max(top, 0), width, Math.min(bottom, height) - Math.max(top, 0));
