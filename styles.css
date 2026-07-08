@@ -102,14 +102,14 @@ body {
 /* Liquid glass surface: translucent panel that blurs and saturates whatever
    sits behind it (dots, orbs), with a specular top edge and soft depth. */
 .glass {
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 45%, rgba(255, 255, 255, 0.045) 100%);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.035) 0%, rgba(255, 255, 255, 0.008) 45%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.14),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.04),
-    0 20px 40px -24px rgba(0, 0, 0, 0.55);
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03),
+    0 20px 40px -24px rgba(0, 0, 0, 0.45);
   transition: border-color 250ms ease, box-shadow 250ms ease;
 }
 .glass:hover {
@@ -131,12 +131,12 @@ body {
 .btn-primary { background: #ededed; color: #0a0a0b; border: 1px solid rgba(255, 255, 255, 0.9); }
 .btn-primary:hover { transform: translateY(-1px); background: #fff; box-shadow: 0 10px 30px -10px rgba(255, 255, 255, 0.25); }
 .btn-ghost {
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.008));
   color: var(--ink);
   border: 1px solid var(--border-strong);
-  backdrop-filter: blur(14px) saturate(150%);
-  -webkit-backdrop-filter: blur(14px) saturate(150%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10);
 }
 .btn-ghost:hover { transform: translateY(-1px); background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.24); }
 .btn .arrow { transition: transform 250ms ease; }
@@ -144,18 +144,30 @@ body {
 
 /* Nav */
 .nav-blur {
-  backdrop-filter: saturate(180%) blur(22px);
-  -webkit-backdrop-filter: saturate(180%) blur(22px);
-  background: linear-gradient(180deg, rgba(58, 58, 60, 0.55) 0%, rgba(47, 47, 48, 0.6) 100%);
+  backdrop-filter: saturate(180%) blur(26px);
+  -webkit-backdrop-filter: saturate(180%) blur(26px);
+  background: linear-gradient(180deg, rgba(58, 58, 60, 0.32) 0%, rgba(47, 47, 48, 0.36) 100%);
   border-bottom: 1px solid transparent;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
   transition: border-color 300ms ease, background 300ms ease;
 }
 .nav-blur.scrolled {
-  background: linear-gradient(180deg, rgba(58, 58, 60, 0.72) 0%, rgba(47, 47, 48, 0.78) 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10), 0 12px 32px -18px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(180deg, rgba(58, 58, 60, 0.45) 0%, rgba(47, 47, 48, 0.5) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 12px 32px -18px rgba(0, 0, 0, 0.4);
 }
+/* Adaptive nav over light sections: glass goes light, ink goes dark (toggled by ui.js) */
+.nav-blur.over-light {
+  background: linear-gradient(180deg, rgba(244, 244, 245, 0.45) 0%, rgba(244, 244, 245, 0.52) 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  color: #17171a;
+}
+.nav-blur.over-light.scrolled { border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+.nav-blur.over-light .nav-link { color: #4d4d55; }
+.nav-blur.over-light .nav-link:hover { color: #17171a; }
+.nav-blur.over-light .nav-link::after { background: #17171a; }
+.nav-blur.over-light .btn-ghost { color: #17171a; border-color: rgba(0, 0, 0, 0.2); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4); }
+
 .nav-link { position: relative; color: var(--ink-muted); font-size: 13.5px; transition: color 200ms ease; }
 .nav-link:hover { color: var(--ink); }
 .nav-link::after { content: ''; position: absolute; left: 0; bottom: -4px; height: 1px; width: 0; background: var(--ink); transition: width 300ms ease; }
