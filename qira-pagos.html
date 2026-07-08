@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 
 <body class="relative overflow-x-hidden">
@@ -22,17 +22,20 @@
 
 
   <!-- ============================================ NAV ============================================ -->
-  <header class="nav-blur fixed top-0 left-0 right-0 z-50" id="nav" role="banner">
-    <nav class="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between" aria-label="Primary">
-      <a href="index.html" class="flex items-center gap-2 group" aria-label="Back to portfolio">
-        <span class="w-7 h-7 rounded-md border border-[var(--border-strong)] flex items-center justify-center mono text-[11px] font-medium bg-gradient-to-br from-white/5 to-white/0">AG</span>
+  <header class="nav-blur fixed top-3 md:top-4 left-1/2 -translate-x-1/2 z-50 w-[min(94vw,880px)] rounded-full" id="nav" role="banner">
+    <nav class="px-4 md:px-5 h-14 flex items-center justify-between gap-3" aria-label="Primary">
+      <a href="index.html" class="flex items-center gap-2.5 group shrink-0" aria-label="Back to portfolio">
+        <img src="assets/logo.png" alt="Axel Galindo logo" class="w-8 h-8" />
         <span class="text-sm font-medium tracking-tight hidden sm:inline">Axel Galindo</span>
       </a>
 
-      <a href="index.html" class="btn btn-ghost" aria-label="Back to portfolio">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        Back to portfolio
-      </a>
+      <div class="flex items-center gap-2 shrink-0">
+        <button id="langToggle" class="btn btn-ghost !px-3.5 !py-2 mono !text-[11px] tracking-wider" aria-label="Cambiar idioma a espanol">ES</button>
+        <a href="index.html" class="btn btn-ghost" aria-label="Back to portfolio">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span data-i18n="nav.back">Back to portfolio</span>
+        </a>
+      </div>
     </nav>
   </header>
 
@@ -323,9 +326,8 @@
 
 
     <footer class="relative border-t py-10" style="border-color: var(--border);">
-      <div class="max-w-6xl mx-auto px-6 md:px-10 flex flex-wrap items-center justify-between gap-4">
-        <p class="mono text-[11px] tracking-wider" style="color: var(--ink-faint);">© 2026 · AXEL GALINDO DALAISÓN</p>
-        <p class="mono text-[11px] tracking-wider" style="color: var(--ink-faint);">Designed &amp; built in Rosario, AR</p>
+      <div class="max-w-6xl mx-auto px-6 md:px-10 text-center">
+        <p class="mono text-[11px] tracking-wider" style="color: var(--ink-faint);" data-i18n="footer.line">Designed &amp; built in Rosario, AR. All rights reserved. © 2026 · AXEL GALINDO DALAISÓN</p>
       </div>
     </footer>
 
@@ -346,6 +348,7 @@
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   </script>
 <script src="dots.js?v=2"></script>
+<script src="i18n.js?v=1"></script>
 <script src="ui.js?v=4"></script>
 </body>
 </html>

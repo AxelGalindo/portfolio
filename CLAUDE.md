@@ -8,8 +8,11 @@ Portfolio profesional de Axel Galindo Dalaisón (UX/UI Designer & Technical Lead
 - `qira-pagos.html` — Case study: billetera fintech del agro argentino (dinero + granos), rol UX/UI Designer, 2024, mobile iOS/Android.
 - `helios.html` — Case study estrella: plataforma de reclutamiento con IA (Bubble.io + OpenAI). Axel fue UX/UI Designer y luego Technical Lead. Incluye el brand system real de Helios.
 - `radium-rocket.html` — Página de experiencia (no case study): 2+ años como UX/UI Designer en agencia. Los proyectos están bajo NDA — nunca inventar clientes ni screens.
-- `styles.css` — Design system compartido por todas las páginas. Cualquier cambio de tokens/estilos globales va acá, NO duplicado en los HTML.
-- `assets/` — Imágenes (screenshots de proyectos, foto de Axel). Hoy hay placeholders en el código con comentarios `REPLACE WITH SCREENSHOT` indicando el `<img>` exacto.
+- `styles.css` — Design system compartido por todas las páginas. Cualquier cambio de tokens/estilos globales va acá, NO duplicado en los HTML. Se referencia con `?v=N` (cache busting): al cambiarlo, subir el número en las 4 páginas.
+- `dots.js` — Fondo interactivo de puntitos (canvas) + pintado de secciones claras con transición gradiente.
+- `ui.js` — Botón flotante "back to top" + nav adaptativo sobre secciones claras.
+- `i18n.js` — Toggle de idioma EN/ES (botón en el header, persiste en localStorage). El inglés vive en el HTML; el español en los diccionarios RICH/TEXT de este archivo. El index está traducido completo; los case studies (helios, qira, radium) todavía NO tienen diccionario.
+- `assets/` — `logo.png` (logo circular "A"), `axel-cat.png` (avatar 3D del About). Screenshots de proyectos siguen pendientes (placeholders con gradientes).
 
 ## Design system (respetar siempre)
 - **Modo:** dark only. Fondo `#0a0a0b`.
@@ -22,7 +25,7 @@ Portfolio profesional de Axel Galindo Dalaisón (UX/UI Designer & Technical Lead
 ## Reglas de contenido
 - **Nunca inventar información.** Todo sale del CV real de Axel, su LinkedIn (linkedin.com/in/axel-galindo-dalaison) y Behance (behance.net/axel-galindo).
 - Radium Rocket: proyectos bajo NDA, mantener la nota de confidencialidad.
-- Idioma del sitio: inglés (audiencia: reclutadores internacionales). Axel habla en español en el chat.
+- Idioma del sitio: inglés por defecto (audiencia: reclutadores internacionales), con toggle a español vía i18n.js. Axel habla en español en el chat.
 - Email de contacto: axelgalindo1998@gmail.com
 - Tono: profesional, directo, sin inflar.
 
