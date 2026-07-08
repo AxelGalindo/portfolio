@@ -74,15 +74,10 @@ body {
   font-weight: 450;
   font-optical-sizing: auto;
   letter-spacing: -0.02em;
+  /* accent violet on every italic word site-wide; the hero keeps its
+     .text-white utility, and inline color styles also take precedence */
+  color: var(--accent);
 }
-
-/* Accent-tinted italic words in section headings (one hue per section) */
-#work .italic-serif { color: var(--accent); }
-#process .italic-serif { color: var(--accent-2); }
-#experience .italic-serif { color: #ec4899; }
-#skills .italic-serif { color: #34d399; }
-#about .italic-serif { color: #7c3aed; }
-#contact .italic-serif { color: var(--accent); }
 .eyebrow {
   font-family: 'Manrope', sans-serif;
   font-size: 11px;
