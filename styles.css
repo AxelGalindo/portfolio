@@ -28,15 +28,20 @@ body {
 
 ::selection { background: rgba(139, 92, 246, 0.35); color: #fff; }
 
-/* Background layers */
-.bg-grid {
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
-  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+/* Light section: flips the ink/border tokens so everything inside adapts.
+   The light background itself is painted by dots.js on the canvas,
+   with a soft gradient into the dark sections above and below. */
+.section-light {
+  color: #17171a;
+  --ink: #17171a;
+  --ink-muted: #4d4d55;
+  --ink-faint: #85858e;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.18);
 }
+.section-light .btn-primary { background: #17171a; color: #f4f4f5; border-color: rgba(0, 0, 0, 0.85); }
+.section-light .btn-primary:hover { background: #000; box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.35); }
+.section-light .btn-ghost:hover { background: rgba(0, 0, 0, 0.04); border-color: rgba(0, 0, 0, 0.3); }
 
 .bg-noise {
   background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
@@ -64,16 +69,17 @@ body {
   line-height: 0.98;
 }
 .italic-serif {
-  font-family: 'Instrument Serif', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 450;
+  font-optical-sizing: auto;
   letter-spacing: -0.02em;
 }
 .eyebrow {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Manrope', sans-serif;
   font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--ink-faint);
 }

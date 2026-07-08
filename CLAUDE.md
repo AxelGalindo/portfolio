@@ -13,7 +13,7 @@ Portfolio profesional de Axel Galindo Dalaisón (UX/UI Designer & Technical Lead
 
 ## Design system (respetar siempre)
 - **Modo:** dark only. Fondo `#0a0a0b`.
-- **Tipografías:** Manrope (display 600 con tracking -0.04em + body), Instrument Serif *italic* solo para palabras acento dentro de headlines (clase `.italic-serif`), JetBrains Mono para eyebrows/meta (clases `.mono`, `.eyebrow`).
+- **Tipografías:** Manrope (display 600 con tracking -0.04em + body), Fraunces *italic* (weight 450, optical sizing auto) solo para palabras acento dentro de headlines (clase `.italic-serif`), Manrope 700 uppercase para eyebrows (clase `.eyebrow`), JetBrains Mono para meta (clase `.mono`).
 - **Tokens CSS** (en `:root` de styles.css): `--bg`, `--ink`, `--ink-muted`, `--ink-faint`, `--border`, `--border-strong`, `--accent: #8b5cf6` (violeta), `--accent-2: #22d3ee` (cyan). Los acentos de color se usan con mucha mesura.
 - **Colores de marca Helios** (solo en helios.html): navy `#001F5E`, azure `#00378E`, cyan `#2CD2FF`, verde `#64F495`, violeta IA `#796CF9`.
 - **Componentes:** `.btn-primary` / `.btn-ghost`, `.chip`, `.project-card`, `.screenshot-frame`, `.metric-card`, `.reveal` (scroll animations con IntersectionObserver), `.orb` (blobs de gradiente animados).
@@ -33,7 +33,7 @@ Portfolio profesional de Axel Galindo Dalaisón (UX/UI Designer & Technical Lead
 
 ## Pendientes conocidos
 1. Reemplazar placeholders de screenshots (Qira: formato 9:16 mobile; Helios: 16:10 web) — Axel tiene capturas de ambos.
-2. Reemplazar el círculo "AG" del About por la foto real de Axel.
+2. ~~Reemplazar el círculo "AG" del About~~ Hecho: avatar 3D de Axel con gato (`assets/axel-cat.png`, PNG transparente).
 3. Agregar Open Graph tags + favicon + sitemap.xml.
 4. Comprar y conectar dominio (candidato: axelgalindo.com) — lo hace Axel manualmente, no automatizar.
 5. A futuro: case study público de Helios más profundo cuando el producto lo permita.

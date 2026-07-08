@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Helios — Case Study · Axel Galindo</title>
-  <meta name="description" content="Case study for Helios: an AI-powered recruitment platform designed and built by Axel Galindo as UX/UI Designer and Technical Lead — Bubble.io + OpenAI." />
+  <title>Helios · Case Study · Axel Galindo</title>
+  <meta name="description" content="Case study for Helios: an AI-powered recruitment platform designed and built by Axel Galindo as UX/UI Designer and Technical Lead. Bubble.io + OpenAI." />
   <meta name="theme-color" content="#0A0A0B" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css" />
@@ -17,7 +17,7 @@
 
 <body class="relative overflow-x-hidden">
 
-  <div class="pointer-events-none fixed inset-0 z-0 bg-grid"></div>
+  <canvas id="dotGrid" class="pointer-events-none fixed inset-0 z-0" aria-hidden="true"></canvas>
   <div class="pointer-events-none fixed inset-0 z-0 bg-noise"></div>
 
 
@@ -52,7 +52,7 @@
           Helios
         </h1>
         <p class="mt-6 text-lg md:text-2xl max-w-2xl leading-snug reveal" style="color: var(--ink-muted);">
-          An <span class="italic-serif" style="color: var(--ink);">AI-powered</span> recruitment platform — designed, architected and built end to end.
+          An <span class="italic-serif" style="color: var(--ink);">AI-powered</span> recruitment platform: designed, architected and built end to end.
         </p>
 
         <!-- Meta grid -->
@@ -71,7 +71,7 @@
           </div>
           <div>
             <p class="eyebrow">Year</p>
-            <p class="mt-2 text-sm md:text-base" style="color: var(--ink);">2025 — Present</p>
+            <p class="mt-2 text-sm md:text-base" style="color: var(--ink);">2025–Present</p>
           </div>
         </div>
       </div>
@@ -109,10 +109,10 @@
 
         <div class="mt-10 space-y-5 text-lg leading-relaxed max-w-3xl reveal" style="color: var(--ink-muted);">
           <p>
-            Helios is an early-stage recruitment platform that uses AI to connect candidates and companies — analyzing CVs, generating structured feedback, and matching talent to open positions intelligently.
+            Helios is an early-stage recruitment platform that uses AI to connect candidates and companies: analyzing CVs, generating structured feedback, and matching talent to open positions intelligently.
           </p>
           <p>
-            I joined as <span style="color: var(--ink);">UX/UI Designer</span> to shape the product from research to interface, and grew into the <span style="color: var(--ink);">Technical Lead</span> role — owning the platform architecture and building it hands-on in Bubble.io with OpenAI integrations. This case reflects that dual journey: the same person who drew the wireframes shipped the working product.
+            I joined as <span style="color: var(--ink);">UX/UI Designer</span> to shape the product from research to interface, and grew into the <span style="color: var(--ink);">Technical Lead</span> role, owning the platform architecture and building it hands-on in Bubble.io with OpenAI integrations. This case reflects that dual journey: the same person who drew the wireframes shipped the working product.
           </p>
         </div>
       </div>
@@ -132,7 +132,7 @@
 
           <div class="space-y-6 reveal" style="transition-delay: 0.1s;">
             <p class="text-lg leading-relaxed" style="color: var(--ink-muted);">
-              Early-stage startups don't have the luxury of separate design and engineering tracks. Helios needed someone who could <span style="color: var(--ink);">design the experience and build it</span> — fast, without sacrificing craft.
+              Early-stage startups don't have the luxury of separate design and engineering tracks. Helios needed someone who could <span style="color: var(--ink);">design the experience and build it</span>: fast, without sacrificing craft.
             </p>
 
             <ul class="space-y-4">
@@ -140,7 +140,7 @@
                 <span class="mono text-[11px] tracking-wider shrink-0 pt-1" style="color: var(--ink-faint);">01</span>
                 <div>
                   <h3 class="font-display text-lg mb-1">Three user roles, one platform</h3>
-                  <p class="text-[15px] leading-relaxed" style="color: var(--ink-muted);">Candidates, companies and recruiters/coaches — each with distinct flows, dashboards and permissions.</p>
+                  <p class="text-[15px] leading-relaxed" style="color: var(--ink-muted);">Candidates, companies and recruiters/coaches, each with distinct flows, dashboards and permissions.</p>
                 </div>
               </li>
               <li class="flex gap-4 pt-6 border-t border-[var(--border)]">
@@ -154,7 +154,7 @@
                 <span class="mono text-[11px] tracking-wider shrink-0 pt-1" style="color: var(--ink-faint);">03</span>
                 <div>
                   <h3 class="font-display text-lg mb-1">No-code at production quality</h3>
-                  <p class="text-[15px] leading-relaxed" style="color: var(--ink-muted);">Bubble.io architecture that stays maintainable as the product scales — data types, workflows, reusable elements and API connections.</p>
+                  <p class="text-[15px] leading-relaxed" style="color: var(--ink-muted);">Bubble.io architecture that stays maintainable as the product scales: data types, workflows, reusable elements and API connections.</p>
                 </div>
               </li>
               <li class="flex gap-4 pt-6 border-t border-[var(--border)]">
@@ -180,7 +180,7 @@
             A brand system built<br>for <span class="italic-serif">trust and clarity</span>.
           </h2>
           <p class="mt-6 text-lg leading-relaxed" style="color: var(--ink-muted);">
-            I defined Helios' visual identity: a deep navy foundation that communicates professionalism, energized by cyan and green for action and success states — and a dedicated violet reserved exclusively for AI-powered features, so users always know when the machine is speaking.
+            I defined Helios' visual identity: a deep navy foundation that communicates professionalism, energized by cyan and green for action and success states, and a dedicated violet reserved exclusively for AI-powered features, so users always know when the machine is speaking.
           </p>
         </div>
 
@@ -236,12 +236,12 @@
           <div class="border border-[var(--border)] rounded-2xl p-6 bg-white/[0.015] reveal">
             <p class="mono text-[11px] tracking-wider uppercase mb-3" style="color: #796CF9;">AI</p>
             <h3 class="font-display text-lg mb-2">CV analysis &amp; matching</h3>
-            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">OpenAI integration for parsing CVs, generating candidate feedback and matching talent to positions — prompts, models and analysis flows.</p>
+            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">OpenAI integration for parsing CVs, generating candidate feedback and matching talent to positions: prompts, models and analysis flows.</p>
           </div>
           <div class="border border-[var(--border)] rounded-2xl p-6 bg-white/[0.015] reveal" style="transition-delay: 0.05s;">
             <p class="mono text-[11px] tracking-wider uppercase mb-3" style="color: #2CD2FF;">UX/UI</p>
             <h3 class="font-display text-lg mb-2">Multi-role dashboards</h3>
-            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">Wireframes and final UI for candidate, company and coach views — open positions, position detail and progress tracking.</p>
+            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">Wireframes and final UI for candidate, company and coach views: open positions, position detail and progress tracking.</p>
           </div>
           <div class="border border-[var(--border)] rounded-2xl p-6 bg-white/[0.015] reveal" style="transition-delay: 0.10s;">
             <p class="mono text-[11px] tracking-wider uppercase mb-3" style="color: #2CD2FF;">Build</p>
@@ -256,7 +256,7 @@
           <div class="border border-[var(--border)] rounded-2xl p-6 bg-white/[0.015] reveal" style="transition-delay: 0.20s;">
             <p class="mono text-[11px] tracking-wider uppercase mb-3" style="color: #2CD2FF;">Build</p>
             <h3 class="font-display text-lg mb-2">Job description editor</h3>
-            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">Two-panel editor with live preview — companies write postings and see the final layout render in real time.</p>
+            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">Two-panel editor with live preview: companies write postings and see the final layout render in real time.</p>
           </div>
           <div class="border border-[var(--border)] rounded-2xl p-6 bg-white/[0.015] reveal" style="transition-delay: 0.25s;">
             <p class="mono text-[11px] tracking-wider uppercase mb-3" style="color: #64F495;">Growth</p>
@@ -296,7 +296,7 @@
         </div>
 
         <p class="mt-8 mono text-[11px] tracking-wider text-center reveal" style="color: var(--ink-faint);">
-          Platform in active development — screens shown reflect the MVP stage.
+          Platform in active development. Screens shown reflect the MVP stage.
         </p>
       </div>
     </section>
@@ -328,7 +328,7 @@
         </div>
 
         <p class="mt-12 text-lg leading-relaxed max-w-3xl reveal" style="color: var(--ink-muted);">
-          Helios is in continuous validation — testing features, gathering feedback and refining the platform ahead of scale. As Technical Lead I keep translating business needs into clear tasks, estimations and roadmaps, while supporting the team's growth in no-code development.
+          Helios is in continuous validation: testing features, gathering feedback and refining the platform ahead of scale. As Technical Lead I keep translating business needs into clear tasks, estimations and roadmaps, while supporting the team's growth in no-code development.
         </p>
       </div>
     </section>
@@ -381,7 +381,7 @@
 
     <footer class="relative border-t py-10" style="border-color: var(--border);">
       <div class="max-w-6xl mx-auto px-6 md:px-10 flex flex-wrap items-center justify-between gap-4">
-        <p class="mono text-[11px] tracking-wider" style="color: var(--ink-faint);">© 2026 — AXEL GALINDO DALAISÓN</p>
+        <p class="mono text-[11px] tracking-wider" style="color: var(--ink-faint);">© 2026 · AXEL GALINDO DALAISÓN</p>
         <p class="mono text-[11px] tracking-wider" style="color: var(--ink-faint);">Designed &amp; built in Rosario, AR</p>
       </div>
     </footer>
@@ -402,5 +402,6 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   </script>
+<script src="dots.js"></script>
 </body>
 </html>

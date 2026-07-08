@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Axel Galindo — UX/UI Designer &amp; Technical Lead</title>
+  <title>Axel Galindo · UX/UI Designer &amp; Technical Lead</title>
   <meta name="description" content="Portfolio of Axel Galindo Dalaisón, UX/UI Designer and Technical Lead based in Rosario, Argentina. Figma, Bubble.io, AI." />
   <meta name="theme-color" content="#0A0A0B" />
 
-  <!-- Fonts: Manrope (display + body) · Instrument Serif (italic accents) · JetBrains Mono (meta) -->
+  <!-- Fonts: Manrope (display + body) · Fraunces (italic accents) · JetBrains Mono (meta) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <!-- Tailwind + Shared design system -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -40,7 +40,7 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* Gradient covers (placeholders — swap for <img> when screenshots ready) */
+    /* Gradient covers (placeholders, swap for <img> when screenshots ready) */
     .cover-qira {
       background:
         radial-gradient(ellipse at 25% 30%, rgba(34, 211, 238, 0.6) 0%, transparent 55%),
@@ -73,7 +73,7 @@
     .project-cover .cover-label {
       position: absolute; inset: 0;
       display: flex; align-items: center; justify-content: center;
-      font-family: 'Instrument Serif', serif; font-style: italic;
+      font-family: 'Fraunces', serif; font-style: italic; font-optical-sizing: auto;
       font-size: clamp(36px, 5vw, 64px);
       color: rgba(255, 255, 255, 0.9);
       letter-spacing: -0.02em;
@@ -97,14 +97,14 @@
 
 <body class="relative overflow-x-hidden">
 
-  <div class="pointer-events-none fixed inset-0 z-0 bg-grid"></div>
+  <canvas id="dotGrid" class="pointer-events-none fixed inset-0 z-0" aria-hidden="true"></canvas>
   <div class="pointer-events-none fixed inset-0 z-0 bg-noise"></div>
 
 
   <!-- =============================================== NAV =============================================== -->
   <header class="nav-blur fixed top-0 left-0 right-0 z-50" id="nav" role="banner">
     <nav class="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between" aria-label="Primary">
-      <a href="#top" class="flex items-center gap-2 group" aria-label="Axel Galindo — home">
+      <a href="#top" class="flex items-center gap-2 group" aria-label="Axel Galindo, home">
         <span class="w-7 h-7 rounded-md border border-[var(--border-strong)] flex items-center justify-center mono text-[11px] font-medium bg-gradient-to-br from-white/5 to-white/0 transition-colors">AG</span>
         <span class="text-sm font-medium tracking-tight hidden sm:inline">Axel Galindo</span>
       </a>
@@ -153,14 +153,7 @@
 
       <div class="relative max-w-6xl mx-auto px-6 md:px-10 w-full hero-stagger">
 
-        <div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full border border-[var(--border-strong)] bg-white/[0.02] mono text-[11px]" style="color: var(--ink-muted);">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span>Available for work</span>
-          <span style="color: var(--ink-faint);">·</span>
-          <span>Rosario, AR</span>
-        </div>
-
-        <h1 id="hero-heading" class="mt-8 font-display text-[52px] sm:text-[68px] md:text-[88px] lg:text-[104px] max-w-[16ch]">
+        <h1 id="hero-heading" class="font-display text-[52px] sm:text-[68px] md:text-[88px] lg:text-[104px] max-w-[16ch]">
           Designing digital products where
           <span class="italic-serif text-white">experience</span>,
           <span class="italic-serif text-white">logic</span>
@@ -170,7 +163,7 @@
         </h1>
 
         <p class="mt-8 max-w-[52ch] text-lg md:text-xl leading-relaxed" style="color: var(--ink-muted);">
-          I'm <span style="color: var(--ink);">Axel Galindo</span> — UX/UI Designer and Technical Lead. I design with Figma, build with Bubble.io, and integrate AI. One profile, the whole product.
+          I'm <span style="color: var(--ink);">Axel Galindo</span>, UX/UI Designer and Technical Lead. I design with Figma, build with Bubble.io, and integrate AI. One profile, the whole product.
         </p>
 
         <div class="mt-10 flex flex-wrap gap-3">
@@ -199,7 +192,7 @@
 
         <div class="reveal flex items-end justify-between flex-wrap gap-4 mb-14 md:mb-20">
           <div>
-            <p class="eyebrow">01 — Selected Work</p>
+            <p class="eyebrow">Selected Work</p>
             <h2 id="work-heading" class="mt-3 font-display text-4xl md:text-6xl">
               Recent <span class="italic-serif">projects</span>.
             </h2>
@@ -211,7 +204,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
 
-          <!-- Project 1 — Qira Pagos -->
+          <!-- Project 1: Qira Pagos -->
           <article class="project-card reveal" style="transition-delay: 0.05s;">
             <a href="qira-pagos.html" class="block" aria-label="Read Qira Pagos case study">
               <div class="project-cover cover-qira">
@@ -226,7 +219,7 @@
                 </div>
                 <h3 class="font-display text-2xl md:text-3xl mb-3">Qira Pagos</h3>
                 <p class="text-[15px] leading-relaxed mb-6" style="color: var(--ink-muted);">
-                  UX/UI design for Argentina's agro fintech wallet — the only digital wallet with accounts in both money and grains.
+                  UX/UI design for Argentina's agro fintech wallet: the only digital wallet with accounts in both money and grains.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-6">
                   <span class="chip">Figma</span>
@@ -241,7 +234,7 @@
             </a>
           </article>
 
-          <!-- Project 2 — Helios -->
+          <!-- Project 2: Helios -->
           <article class="project-card reveal" style="transition-delay: 0.15s;">
             <a href="helios.html" class="block" aria-label="Read Helios case study">
               <div class="project-cover cover-helios">
@@ -272,7 +265,7 @@
             </a>
           </article>
 
-          <!-- Project 3 — Radium Rocket -->
+          <!-- Project 3: Radium Rocket -->
           <article class="project-card reveal md:col-span-2" style="transition-delay: 0.25s;">
             <a href="radium-rocket.html" class="block" aria-label="Read Radium Rocket experience">
               <div class="project-cover cover-radium" style="aspect-ratio: 21 / 9;">
@@ -284,7 +277,7 @@
                     <div class="flex items-center gap-3 mb-3">
                       <p class="mono text-[11px] tracking-wider uppercase" style="color: var(--ink-faint);">Agency · Web &amp; Mobile</p>
                       <span class="mono text-[11px]" style="color: var(--ink-faint);">·</span>
-                      <span class="mono text-[11px]" style="color: var(--ink-faint);">2022 — 2024</span>
+                      <span class="mono text-[11px]" style="color: var(--ink-faint);">2022–2024</span>
                     </div>
                     <h3 class="font-display text-2xl md:text-3xl mb-3">Client Work @ Radium Rocket</h3>
                     <p class="text-[15px] leading-relaxed max-w-2xl" style="color: var(--ink-muted);">
@@ -324,7 +317,7 @@
       <div class="max-w-6xl mx-auto px-6 md:px-10">
 
         <div class="reveal mb-14 md:mb-20 max-w-3xl">
-          <p class="eyebrow">02 — Design Process</p>
+          <p class="eyebrow">Design Process</p>
           <h2 id="process-heading" class="mt-3 font-display text-4xl md:text-6xl">
             From research <br>to a working <span class="italic-serif">product</span>.
           </h2>
@@ -364,7 +357,7 @@
               <span class="mono text-4xl font-medium" style="color: rgba(255,255,255,0.2);">04</span>
             </div>
             <h3 class="font-display text-xl mb-2">Wireframes</h3>
-            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">Low-fidelity structure to validate flow, hierarchy and scope early — fast feedback, cheap changes.</p>
+            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">Low-fidelity structure to validate flow, hierarchy and scope early: fast feedback, cheap changes.</p>
           </li>
           <li class="reveal border border-[var(--border)] rounded-2xl p-6 bg-white/[0.015] hover:bg-white/[0.03] transition-colors" style="transition-delay: 0.20s;">
             <div class="flex items-baseline justify-between mb-6">
@@ -380,7 +373,7 @@
               <span class="mono text-4xl font-medium" style="color: rgba(255,255,255,0.2);">06</span>
             </div>
             <h3 class="font-display text-xl mb-2">Prototype &amp; Iterate</h3>
-            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">Interactive prototypes, usability testing and build iteration — refining the product until it works for the people using it.</p>
+            <p class="text-[14px] leading-relaxed" style="color: var(--ink-muted);">Interactive prototypes, usability testing and build iteration, refining the product until it works for the people using it.</p>
           </li>
         </ol>
       </div>
@@ -391,7 +384,7 @@
     <section id="experience" class="relative py-24 md:py-36 border-t border-[var(--border)]" aria-labelledby="experience-heading">
       <div class="max-w-6xl mx-auto px-6 md:px-10">
         <div class="reveal mb-14 md:mb-20 max-w-3xl">
-          <p class="eyebrow">03 — Experience</p>
+          <p class="eyebrow">Experience</p>
           <h2 id="experience-heading" class="mt-3 font-display text-4xl md:text-6xl">
             A <span class="italic-serif">decade</span> of<br>design &amp; building.
           </h2>
@@ -400,12 +393,12 @@
         <div class="grid md:grid-cols-[180px_1fr] gap-12">
           <aside class="hidden md:block sticky top-28 h-fit">
             <p class="eyebrow">Timeline</p>
-            <p class="mt-3 text-sm" style="color: var(--ink-muted);">2018 — Present</p>
+            <p class="mt-3 text-sm" style="color: var(--ink-muted);">2018–Present</p>
           </aside>
 
           <div class="space-y-12">
             <div class="timeline-item current reveal">
-              <p class="mono text-[11px] tracking-wider uppercase mb-2" style="color: var(--accent);">Aug 2025 — Present</p>
+              <p class="mono text-[11px] tracking-wider uppercase mb-2" style="color: var(--accent);">Aug 2025–Present</p>
               <h3 class="font-display text-2xl md:text-3xl">Technical Lead · <span style="color: var(--ink-muted);">Helios</span></h3>
               <p class="mt-3 text-[15px] leading-relaxed max-w-2xl" style="color: var(--ink-muted);">
                 Leading the technical build of an AI-powered MVP: defining architecture, integrating OpenAI APIs for CV analysis and intelligent matching, building the platform in Bubble.io, and supporting the team on no-code best practices.
@@ -419,7 +412,7 @@
             </div>
 
             <div class="timeline-item reveal">
-              <p class="mono text-[11px] tracking-wider uppercase mb-2" style="color: var(--ink-faint);">May — Nov 2025</p>
+              <p class="mono text-[11px] tracking-wider uppercase mb-2" style="color: var(--ink-faint);">May–Nov 2025</p>
               <h3 class="font-display text-2xl md:text-3xl">UX/UI Designer · <span style="color: var(--ink-muted);">Helios</span></h3>
               <p class="mt-3 text-[15px] leading-relaxed max-w-2xl" style="color: var(--ink-muted);">
                 User research, UX flows, wireframes, UI design, usability testing and design systems. Close collaboration with product and development to ship each iteration of the MVP.
@@ -433,7 +426,7 @@
             </div>
 
             <div class="timeline-item reveal">
-              <p class="mono text-[11px] tracking-wider uppercase mb-2" style="color: var(--ink-faint);">Sep 2022 — Nov 2024</p>
+              <p class="mono text-[11px] tracking-wider uppercase mb-2" style="color: var(--ink-faint);">Sep 2022–Nov 2024</p>
               <h3 class="font-display text-2xl md:text-3xl">UX/UI Designer · <span style="color: var(--ink-muted);">Radium Rocket</span></h3>
               <p class="mt-3 text-[15px] leading-relaxed max-w-2xl" style="color: var(--ink-muted);">
                 Designed intuitive interfaces for web and mobile at an engineering-driven agency. Ran user research and usability tests, drove the process from concept to implementation, and contributed to design standards across the organization.
@@ -448,10 +441,10 @@
             </div>
 
             <div class="timeline-item reveal">
-              <p class="mono text-[11px] tracking-wider uppercase mb-2" style="color: var(--ink-faint);">2018 — Oct 2022</p>
+              <p class="mono text-[11px] tracking-wider uppercase mb-2" style="color: var(--ink-faint);">2018–Oct 2022</p>
               <h3 class="font-display text-2xl md:text-3xl">Freelance Designer</h3>
               <p class="mt-3 text-[15px] leading-relaxed max-w-2xl" style="color: var(--ink-muted);">
-                Graphic design for social media, brand identity work, and web design projects — including Comercial CAB (content creation and Mercado Libre operations, 2020–2022) and Novo Ratio (web + brand redesign, 2020–2021).
+                Graphic design for social media, brand identity work, and web design projects, including Comercial CAB (content creation and Mercado Libre operations, 2020–2022) and Novo Ratio (web + brand redesign, 2020–2021).
               </p>
               <div class="mt-4 flex flex-wrap gap-2">
                 <span class="chip">Graphic Design</span>
@@ -470,7 +463,7 @@
     <section id="skills" class="relative py-24 md:py-36 border-t border-[var(--border)]" aria-labelledby="skills-heading">
       <div class="max-w-6xl mx-auto px-6 md:px-10">
         <div class="reveal mb-14 md:mb-20 max-w-3xl">
-          <p class="eyebrow">04 — Skills &amp; Tools</p>
+          <p class="eyebrow">Skills &amp; Tools</p>
           <h2 id="skills-heading" class="mt-3 font-display text-4xl md:text-6xl">
             A hybrid <span class="italic-serif">toolkit</span>.
           </h2>
@@ -536,31 +529,16 @@
 
 
     <!-- =============================================== ABOUT =============================================== -->
-    <section id="about" class="relative py-24 md:py-36 border-t border-[var(--border)]" aria-labelledby="about-heading">
+    <section id="about" class="section-light relative py-28 md:py-44" aria-labelledby="about-heading">
       <div class="max-w-6xl mx-auto px-6 md:px-10">
-        <div class="grid md:grid-cols-[280px_1fr] gap-10 md:gap-16 items-start">
+        <div class="grid md:grid-cols-[320px_1fr] gap-10 md:gap-16 items-center">
 
           <div class="reveal">
-            <!-- REPLACE with your photo:
-                 <img src="assets/axel.jpg" alt="Axel Galindo" class="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover" /> -->
-            <div class="relative w-40 h-40 md:w-56 md:h-56 rounded-full p-[2px]" style="background: linear-gradient(135deg, var(--accent), var(--accent-2), var(--accent));" aria-hidden="true">
-              <div class="w-full h-full rounded-full flex items-center justify-center overflow-hidden relative" style="background: var(--bg);">
-                <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(139,92,246,0.3), transparent, rgba(34,211,238,0.3));"></div>
-                <span class="relative font-display text-5xl md:text-6xl" style="color: var(--ink);">AG</span>
-              </div>
-            </div>
-            <div class="mt-6 space-y-2">
-              <p class="mono text-[11px] tracking-wider uppercase flex items-center gap-2" style="color: var(--ink-faint);">
-                <span class="status-dot" aria-hidden="true"></span>
-                Available for work
-              </p>
-              <p class="text-sm" style="color: var(--ink-muted);">Rosario, Argentina</p>
-              <p class="text-sm" style="color: var(--ink-muted);">ES (native) · EN (professional)</p>
-            </div>
+            <img src="assets/axel-cat.png" alt="3D portrait of Axel Galindo holding a cat" class="w-64 md:w-full max-w-[320px] mx-auto md:mx-0" />
           </div>
 
           <div class="reveal">
-            <p class="eyebrow">05 — About</p>
+            <p class="eyebrow">About</p>
             <h2 id="about-heading" class="mt-3 font-display text-4xl md:text-5xl leading-[1]">
               I like building <span class="italic-serif">useful</span>, <span class="italic-serif">thoughtful</span> products.
             </h2>
@@ -570,10 +548,10 @@
                 I'm Axel, a UX/UI designer and Technical Lead based in Rosario. I combine UX/UI, technical judgment and strategic thinking to connect real needs with practical solutions.
               </p>
               <p>
-                Over the last few years I designed interfaces at Radium Rocket, and today I'm leading the technical build of Helios — an MVP on Bubble.io with OpenAI integrations. I enjoy supporting teams, organizing processes and finding the simplest way to solve complex problems.
+                Over the last few years I designed interfaces at Radium Rocket, and today I'm leading the technical build of Helios, an MVP on Bubble.io with OpenAI integrations. I enjoy supporting teams, organizing processes and finding the simplest way to solve complex problems.
               </p>
               <p>
-                Outside work: exploring new tools, obsessing over interaction details, and finding the seam between design and engineering.
+                Outside of work, I'm usually playing video games, watching movies, or wandering around the city on weekends. I'm also a big food lover: always up for discovering the next good meal.
               </p>
             </div>
 
@@ -604,13 +582,13 @@
       </div>
 
       <div class="relative max-w-5xl mx-auto px-6 md:px-10 text-center">
-        <p class="eyebrow reveal">06 — Contact</p>
+        <p class="eyebrow reveal">Contact</p>
         <h2 id="contact-heading" class="mt-4 font-display text-5xl sm:text-6xl md:text-8xl reveal leading-[0.95]">
           Let's build <br>
           something <span class="italic-serif">together</span>.
         </h2>
         <p class="mt-8 text-lg md:text-xl max-w-xl mx-auto reveal" style="color: var(--ink-muted);">
-          Full-time, freelance or a quick chat — drop a line.
+          Full-time, freelance or a quick chat. Drop a line.
         </p>
 
         <div class="mt-12 reveal">
@@ -631,7 +609,7 @@
 
     <footer class="relative border-t py-10" style="border-color: var(--border);">
       <div class="max-w-6xl mx-auto px-6 md:px-10 flex flex-wrap items-center justify-between gap-4">
-        <p class="mono text-[11px] tracking-wider" style="color: var(--ink-faint);">© 2026 — AXEL GALINDO DALAISÓN</p>
+        <p class="mono text-[11px] tracking-wider" style="color: var(--ink-faint);">© 2026 · AXEL GALINDO DALAISÓN</p>
         <p class="mono text-[11px] tracking-wider" style="color: var(--ink-faint);">Designed &amp; built in Rosario, AR</p>
       </div>
     </footer>
@@ -679,5 +657,6 @@
       } catch { window.location.href = 'mailto:' + EMAIL; }
     });
   </script>
+<script src="dots.js"></script>
 </body>
 </html>
