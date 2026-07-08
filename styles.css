@@ -75,6 +75,14 @@ body {
   font-optical-sizing: auto;
   letter-spacing: -0.02em;
 }
+
+/* Accent-tinted italic words in section headings (one hue per section) */
+#work .italic-serif { color: var(--accent); }
+#process .italic-serif { color: var(--accent-2); }
+#experience .italic-serif { color: #ec4899; }
+#skills .italic-serif { color: #34d399; }
+#about .italic-serif { color: #7c3aed; }
+#contact .italic-serif { color: var(--accent); }
 .eyebrow {
   font-family: 'Manrope', sans-serif;
   font-size: 11px;
@@ -175,6 +183,9 @@ body {
 .nav-blur.over-light .nav-link::after { background: #17171a; }
 .nav-blur.over-light .btn-ghost { color: #17171a; border-color: rgba(0, 0, 0, 0.2); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4); }
 
+/* Buttons inside the pill nav follow its rounded geometry */
+.nav-blur .btn { border-radius: 999px; }
+
 .nav-link { position: relative; color: var(--ink-muted); font-size: 13.5px; transition: color 200ms ease; }
 .nav-link:hover { color: var(--ink); }
 .nav-link::after { content: ''; position: absolute; left: 0; bottom: -4px; height: 1px; width: 0; background: var(--ink); transition: width 300ms ease; }
@@ -192,13 +203,15 @@ body {
   background: rgba(255, 255, 255, 0.02);
 }
 
-/* Back to top floating button (injected by ui.js) */
+/* Back to top floating button (injected by ui.js).
+   Sits vertically centered on the right edge; hover reveals its label. */
 .back-to-top {
   position: fixed;
-  right: 24px; bottom: 24px;
-  width: 44px; height: 44px;
+  right: 40px; top: 50%;
+  height: 44px; min-width: 44px;
+  padding: 0 13px;
   display: flex; align-items: center; justify-content: center;
-  border-radius: 50%;
+  border-radius: 999px;
   border: 1px solid var(--border-strong);
   background: rgba(47, 47, 48, 0.7);
   backdrop-filter: blur(12px);
@@ -207,12 +220,22 @@ body {
   cursor: pointer;
   z-index: 60;
   opacity: 0;
-  transform: translateY(12px);
+  transform: translateY(calc(-50% + 12px));
   pointer-events: none;
   transition: opacity 300ms ease, transform 300ms ease, background 200ms ease;
 }
-.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-to-top.visible { opacity: 1; transform: translateY(-50%); pointer-events: auto; }
 .back-to-top:hover { background: rgba(70, 70, 72, 0.85); }
+.back-to-top .btt-label {
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  font-size: 12px;
+  font-weight: 500;
+  transition: max-width 300ms ease, opacity 300ms ease, margin-left 300ms ease;
+}
+.back-to-top:hover .btt-label { max-width: 160px; opacity: 1; margin-left: 8px; }
 
 /* Scroll reveal */
 .reveal {

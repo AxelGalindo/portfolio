@@ -179,6 +179,7 @@
     ['Takeaways', 'Aprendizajes'],
     ['Screenshot placeholder', 'Captura pendiente'],
     ['Back', 'Volver'],
+    ['Back to top', 'Volver a arriba'],
     ['All projects', 'Todos los proyectos'],
     ['Return to portfolio', 'Volver al portfolio'],
     ['Next case', 'Siguiente caso'],
