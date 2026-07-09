@@ -181,6 +181,14 @@ body {
 /* Buttons inside the pill nav follow its rounded geometry */
 .nav-blur .btn { border-radius: 999px; }
 
+/* Mobile dropdown: browsers ignore nested backdrop-filters (the pill already
+   has one), so the menu needs a near-opaque background to stay readable */
+.nav-blur #mobileMenu {
+  background: rgba(17, 17, 20, 0.97);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
 .nav-link { position: relative; color: var(--ink-muted); font-size: 13.5px; transition: color 200ms ease; }
 .nav-link:hover { color: var(--ink); }
 .nav-link::after { content: ''; position: absolute; left: 0; bottom: -4px; height: 1px; width: 0; background: var(--ink); transition: width 300ms ease; }
@@ -231,6 +239,12 @@ body {
   transition: max-width 300ms ease, opacity 300ms ease, margin-left 300ms ease;
 }
 .back-to-top:hover .btt-label { max-width: 160px; opacity: 1; margin-left: 8px; }
+
+/* On mobile the button sits near the bottom corner instead of mid-screen */
+@media (max-width: 768px) {
+  .back-to-top { top: auto; bottom: 28px; right: 20px; transform: translateY(12px); }
+  .back-to-top.visible { transform: translateY(0); }
+}
 
 /* Scroll reveal */
 .reveal {
