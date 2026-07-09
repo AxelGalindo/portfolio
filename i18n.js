@@ -177,7 +177,7 @@
     ['Visual Language', 'Lenguaje visual'],
     ['Responsibilities', 'Responsabilidades'],
     ['Takeaways', 'Aprendizajes'],
-    ['Screenshot placeholder', 'Captura pendiente'],
+    ['Coming soon', 'Próximamente'],
     ['Back', 'Volver'],
     ['Back to top', 'Volver a arriba'],
     ['All projects', 'Todos los proyectos'],

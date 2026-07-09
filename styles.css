@@ -273,10 +273,23 @@ body {
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  /* colorful blobs standing in for the future screenshot... */
+  background:
+    radial-gradient(ellipse at 20% 25%, rgba(139, 92, 246, 0.5) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 30%, rgba(34, 211, 238, 0.35) 0%, transparent 55%),
+    radial-gradient(ellipse at 55% 85%, rgba(236, 72, 153, 0.3) 0%, transparent 60%),
+    linear-gradient(160deg, #101018 0%, #0c0c12 100%);
   aspect-ratio: 16 / 10;
   position: relative;
   display: flex; align-items: center; justify-content: center;
+}
+/* ...seen through frosted glass */
+.screenshot-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(28px) saturate(140%);
+  -webkit-backdrop-filter: blur(28px) saturate(140%);
 }
 .screenshot-frame::after {
   content: attr(data-label);
@@ -293,11 +306,17 @@ body {
   border: 1px solid var(--border);
 }
 .screenshot-frame .placeholder-text {
+  position: relative;
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(10, 10, 11, 0.45);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10);
 }
 
 .metric-card {
