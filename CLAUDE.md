@@ -38,7 +38,7 @@ Portfolio profesional de Axel Galindo Dalaisón (UX/UI Designer & Technical Lead
 1. Reemplazar placeholders de screenshots (Qira: formato 9:16 mobile; Helios: 16:10 web) — Axel tiene capturas de ambos.
 2. ~~Reemplazar el círculo "AG" del About~~ Hecho: avatar 3D de Axel con gato (`assets/axel-cat.png`, PNG transparente).
 3. Agregar Open Graph tags + favicon + sitemap.xml.
-4. Comprar y conectar dominio (candidato: axelgalindo.com) — lo hace Axel manualmente, no automatizar.
+4. ~~Comprar y conectar dominio~~ Hecho (2026-07-09): producción en https://www.axelgalindo.com (Namecheap + Vercel, el apex redirige a www).
 5. A futuro: case study público de Helios más profundo cuando el producto lo permita.
 
 ## Qué NO hacer
