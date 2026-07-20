@@ -40,14 +40,15 @@
     render();
   }
 
-  // Sample the portrait into per-cell luminance/alpha, cover-fit, anchored top
+  // Sample the portrait into per-cell luminance/alpha.
+  // Fits the photo to the hero height and anchors it to the right edge.
   function sample() {
     const c = document.createElement('canvas');
     c.width = cols; c.height = rows;
     const cx = c.getContext('2d');
-    const s = Math.min(cols / img.width, rows / img.height);
-    const dw = img.width * s, dh = img.height * s;
-    cx.drawImage(img, (cols - dw) / 2, Math.max(0, (rows - dh) * 0.3), dw, dh);
+    const s = rows / img.height;
+    const dw = img.width * s, dh = rows;
+    cx.drawImage(img, cols - dw, 0, dw, dh);
     const d = cx.getImageData(0, 0, cols, rows).data;
     lum = new Float32Array(cols * rows);
     alph = new Float32Array(cols * rows);
@@ -79,8 +80,8 @@
     const rct = canvas.getBoundingClientRect();
     const mx = (mouse.x - rct.left) / CELL;
     const my = (mouse.y - rct.top) / CELL;
-    const fadeL = cols * 0.28;   // blend into the hero on the left
-    const fadeB = rows * 0.18;   // and into the next section below
+    const dimL = cols * 0.45;    // clouds stay subtle behind the headline
+    const fadeB = rows * 0.18;   // blend into the next section below
 
     for (let y = 0; y < rows; y++) {
       for (let x = 0; x < cols; x++) {
@@ -96,7 +97,7 @@
           v += (1 - Math.sqrt(d2) / MOUSE_RADIUS) * MOUSE_BOOST;
         }
 
-        if (x < fadeL) v *= x / fadeL;
+        if (x < dimL) v *= 0.45 + 0.55 * (x / dimL);
         if (y > rows - fadeB) v *= (rows - y) / fadeB;
 
         const th = (BAYER[(y & 3) * 4 + (x & 3)] + 0.5) / 16;
@@ -113,7 +114,7 @@
   }
 
   function frame() {
-    t += 0.0045;
+    t += 0.0016;
     render();
     raf = running ? requestAnimationFrame(frame) : null;
   }
