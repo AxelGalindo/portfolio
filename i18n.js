@@ -8,8 +8,8 @@
   const RICH = [
     ['Designing digital products where <span class="italic-serif text-white">experience</span>, <span class="italic-serif text-white">logic</span> &amp; <span class="italic-serif text-white">craft</span> converge.',
      'Diseño productos digitales donde <span class="italic-serif text-white">experiencia</span>, <span class="italic-serif text-white">lógica</span> y <span class="italic-serif text-white">oficio</span> convergen.'],
-    ['I\'m <span style="color: var(--ink);">Axel Galindo</span>, UX/UI Designer and Technical Lead. I design with Figma, build with Bubble.io, and integrate AI. One profile, the whole product.',
-     'Soy <span style="color: var(--ink);">Axel Galindo</span>, UX/UI Designer y Technical Lead. Diseño con Figma, construyo con Bubble.io e integro IA. Un solo perfil, el producto completo.'],
+    ['I\'m <span style="color: var(--ink);">Axel Galindo</span>, UX/UI Designer and Design Lead. I design with Figma, build with Bubble.io, and integrate AI. One profile, the whole product.',
+     'Soy <span style="color: var(--ink);">Axel Galindo</span>, UX/UI Designer y Design Lead. Diseño con Figma, construyo con Bubble.io e integro IA. Un solo perfil, el producto completo.'],
     ['Recent <span class="italic-serif">projects</span>.',
      'Proyectos <span class="italic-serif">recientes</span>.'],
     ['From research <br>to a working <span class="italic-serif">product</span>.',
@@ -52,8 +52,8 @@
      'Una plataforma de reclutamiento <span class="italic-serif" style="color: var(--ink);">con IA</span>: diseñada, arquitecturada y construida de punta a punta.'],
     ['One person, <span class="italic-serif">two hats</span>:<br> designer and builder.',
      'Una persona, <span class="italic-serif">dos sombreros</span>:<br> diseñador y constructor.'],
-    ['I joined as <span style="color: var(--ink);">UX/UI Designer</span> to shape the product from research to interface, and grew into the <span style="color: var(--ink);">Technical Lead</span> role, owning the platform architecture and building it hands-on in Bubble.io with OpenAI integrations. This case reflects that dual journey: the same person who drew the wireframes shipped the working product.',
-     'Entré como <span style="color: var(--ink);">UX/UI Designer</span> para darle forma al producto desde la investigación hasta la interfaz, y crecí al rol de <span style="color: var(--ink);">Technical Lead</span>, haciéndome cargo de la arquitectura de la plataforma y construyéndola hands-on en Bubble.io con integraciones de OpenAI. Este caso refleja ese doble recorrido: la misma persona que dibujó los wireframes lanzó el producto funcionando.'],
+    ['I joined as <span style="color: var(--ink);">UX/UI Designer</span> to shape the product from research to interface, and grew into the <span style="color: var(--ink);">Design Lead</span> role, owning the platform architecture and building it hands-on in Bubble.io with OpenAI integrations. This case reflects that dual journey: the same person who drew the wireframes shipped the working product.',
+     'Entré como <span style="color: var(--ink);">UX/UI Designer</span> para darle forma al producto desde la investigación hasta la interfaz, y crecí al rol de <span style="color: var(--ink);">Design Lead</span>, haciéndome cargo de la arquitectura de la plataforma y construyéndola hands-on en Bubble.io con integraciones de OpenAI. Este caso refleja ese doble recorrido: la misma persona que dibujó los wireframes lanzó el producto funcionando.'],
     ['From zero to a working <span class="italic-serif">MVP</span>.',
      'De cero a un <span class="italic-serif">MVP</span> funcionando.'],
     ['Early-stage startups don\'t have the luxury of separate design and engineering tracks. Helios needed someone who could <span style="color: var(--ink);">design the experience and build it</span>: fast, without sacrificing craft.',
@@ -144,14 +144,15 @@
     ['Design', 'Diseño'],
     ['Build', 'Desarrollo'],
     ['AI & Product', 'IA y producto'],
-    ["I'm Axel, a UX/UI designer and Technical Lead based in Rosario. I combine UX/UI, technical judgment and strategic thinking to connect real needs with practical solutions.",
-     'Soy Axel, diseñador UX/UI y Technical Lead en Rosario. Combino UX/UI, criterio técnico y pensamiento estratégico para conectar necesidades reales con soluciones prácticas.'],
+    ["I'm Axel, a UX/UI designer and Design Lead based in Rosario. I combine UX/UI, technical judgment and strategic thinking to connect real needs with practical solutions.",
+     'Soy Axel, diseñador UX/UI y Design Lead en Rosario. Combino UX/UI, criterio técnico y pensamiento estratégico para conectar necesidades reales con soluciones prácticas.'],
     ["Over the last few years I designed interfaces at Radium Rocket, and today I'm leading the technical build of Helios, an MVP on Bubble.io with OpenAI integrations. I enjoy supporting teams, organizing processes and finding the simplest way to solve complex problems.",
      'En los últimos años diseñé interfaces en Radium Rocket, y hoy lidero la construcción técnica de Helios, un MVP en Bubble.io con integraciones de OpenAI. Disfruto acompañar equipos, ordenar procesos y encontrar la forma más simple de resolver problemas complejos.'],
     ["Outside of work, I'm usually playing video games, watching movies, or wandering around the city on weekends. I'm also a big food lover: always up for discovering the next good meal.",
      'Fuera del trabajo, seguramente esté jugando videojuegos, mirando películas o caminando por la ciudad los fines de semana. También soy muy fan de la comida: siempre listo para descubrir la próxima buena comida.'],
     ['Full-time, freelance or a quick chat. Drop a line.',
      'Full-time, freelance o una charla rápida. Escribime.'],
+    ['Download CV', 'Descargar CV'],
     ['Copy', 'Copiar'],
     ['Designed & built in Rosario, AR. All rights reserved. © 2026 · AXEL GALINDO DALAISÓN',
      'Diseñado y construido en Rosario, AR. Todos los derechos reservados. © 2026 · AXEL GALINDO DALAISÓN'],
@@ -269,8 +270,8 @@
     ['Full ownership, research to production', 'Ownership total, de la investigación a producción'],
     ['AI-native', 'Nativa en IA'],
     ['OpenAI at the core of the product', 'OpenAI en el corazón del producto'],
-    ["Helios is in continuous validation: testing features, gathering feedback and refining the platform ahead of scale. As Technical Lead I keep translating business needs into clear tasks, estimations and roadmaps, while supporting the team's growth in no-code development.",
-     'Helios está en validación continua: probando funcionalidades, recolectando feedback y refinando la plataforma antes de escalar. Como Technical Lead sigo traduciendo necesidades de negocio en tareas claras, estimaciones y roadmaps, mientras acompaño el crecimiento del equipo en desarrollo no-code.'],
+    ["Helios is in continuous validation: testing features, gathering feedback and refining the platform ahead of scale. As Design Lead I keep translating business needs into clear tasks, estimations and roadmaps, while supporting the team's growth in no-code development.",
+     'Helios está en validación continua: probando funcionalidades, recolectando feedback y refinando la plataforma antes de escalar. Como Design Lead sigo traduciendo necesidades de negocio en tareas claras, estimaciones y roadmaps, mientras acompaño el crecimiento del equipo en desarrollo no-code.'],
 
     // ---- radium-rocket.html ----
     ['Software Agency', 'Agencia de software'],
@@ -298,8 +299,8 @@
     ["Agency work means switching contexts constantly: different clients, users and constraints. It builds a designer's most underrated muscle: adapting fast without losing rigor.",
      'El trabajo de agencia implica cambiar de contexto constantemente: distintos clientes, usuarios y restricciones. Desarrolla el músculo más subestimado de un diseñador: adaptarse rápido sin perder rigor.'],
     ['Designing with engineers', 'Diseñar con ingenieros'],
-    ['At an engineering-driven company, design earns its seat by shipping. I learned to design with implementation in mind, a mindset that later became my Technical Lead foundation.',
-     'En una empresa con foco en ingeniería, el diseño se gana su lugar lanzando. Aprendí a diseñar con la implementación en mente, una mentalidad que después fue la base de mi rol de Technical Lead.'],
+    ['At an engineering-driven company, design earns its seat by shipping. I learned to design with implementation in mind, a mindset that later became my Design Lead foundation.',
+     'En una empresa con foco en ingeniería, el diseño se gana su lugar lanzando. Aprendí a diseñar con la implementación en mente, una mentalidad que después fue la base de mi rol de Design Lead.'],
     ['Process as a product', 'El proceso como producto'],
     ['Contributing to org-wide design standards showed me that how a team designs matters as much as what it designs.',
      'Contribuir a los estándares de diseño de toda la organización me mostró que cómo diseña un equipo importa tanto como qué diseña.']
@@ -355,6 +356,9 @@
       btn.textContent = lang === 'en' ? 'ES' : 'EN';
       btn.setAttribute('aria-label', lang === 'en' ? 'Cambiar idioma a español' : 'Switch language to English');
     }
+    // the CV download follows the active language
+    const cv = document.getElementById('cvDownload');
+    if (cv) cv.setAttribute('href', lang === 'es' ? 'assets/axel-galindo-cv-es.pdf' : 'assets/axel-galindo-cv-en.pdf');
   }
 
   function setLang(next) {

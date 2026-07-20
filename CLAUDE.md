@@ -1,12 +1,12 @@
 # Portfolio de Axel Galindo — Contexto del proyecto
 
 ## Qué es esto
-Portfolio profesional de Axel Galindo Dalaisón (UX/UI Designer & Technical Lead, Rosario, Argentina). Sitio estático en HTML + Tailwind CSS (vía CDN) + un CSS compartido. Sin frameworks, sin build step. Ya está en producción: GitHub → Vercel con auto-deploy.
+Portfolio profesional de Axel Galindo Dalaisón (UX/UI Designer & Design Lead, Rosario, Argentina). Sitio estático en HTML + Tailwind CSS (vía CDN) + un CSS compartido. Sin frameworks, sin build step. Ya está en producción: GitHub → Vercel con auto-deploy.
 
 ## Estructura
 - `index.html` — Landing principal: Hero, Selected Work (3 cards), Design Process, Experience, Skills, About, Contact.
 - `qira-pagos.html` — Case study: billetera fintech del agro argentino (dinero + granos), rol UX/UI Designer, 2024, mobile iOS/Android.
-- `helios.html` — Case study estrella: plataforma de reclutamiento con IA (Bubble.io + OpenAI). Axel fue UX/UI Designer y luego Technical Lead. Incluye el brand system real de Helios.
+- `helios.html` — Case study estrella: plataforma de reclutamiento con IA (Bubble.io + OpenAI). Axel fue UX/UI Designer y luego Design Lead. Incluye el brand system real de Helios.
 - `radium-rocket.html` — Página de experiencia (no case study): 2+ años como UX/UI Designer en agencia. Los proyectos están bajo NDA — nunca inventar clientes ni screens.
 - `styles.css` — Design system compartido por todas las páginas. Cualquier cambio de tokens/estilos globales va acá, NO duplicado en los HTML. Se referencia con `?v=N` (cache busting): al cambiarlo, subir el número en las 4 páginas.
 - `dots.js` — Fondo interactivo de puntitos (canvas) + pintado de secciones claras con transición gradiente.
