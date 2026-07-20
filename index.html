@@ -24,7 +24,7 @@
   <!-- Fonts: Manrope (display + body) · Fraunces (italic accents) · JetBrains Mono (meta) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <!-- Tailwind + Shared design system -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -185,8 +185,8 @@
 
         <div>
         <h1 id="hero-heading" class="font-display uppercase leading-[0.92]">
-          <span class="block text-[15vw] md:text-[110px] lg:text-[128px] font-medium tracking-[-0.02em]">Axel</span>
-          <span class="block text-[15vw] md:text-[110px] lg:text-[128px] font-extrabold tracking-[-0.01em]" style="color: var(--accent);">Galindo.</span>
+          <span data-hero-name class="block text-[15vw] md:text-[110px] lg:text-[128px] tracking-[-0.02em]">Axel</span>
+          <span data-hero-name class="block text-[15vw] md:text-[110px] lg:text-[128px] tracking-[-0.01em]" style="color: var(--accent);">Galindo.</span>
         </h1>
 
         <div class="mt-10 flex flex-wrap gap-3">
@@ -686,6 +686,7 @@
   </script>
 <script src="dots.js?v=2"></script>
 <script src="hero-pixel.js?v=5"></script>
+<script src="hero-name.js?v=1"></script>
 <script src="ui.js?v=5"></script>
 <script src="i18n.js?v=5"></script>
 </body>
