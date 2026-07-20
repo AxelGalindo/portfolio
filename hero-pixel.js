@@ -9,11 +9,11 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const ctx = canvas.getContext('2d');
 
-  const CELL = 5;              // px per dither cell
-  const IMG_SRC = 'assets/hero-portrait.png?v=2';
-  const CLOUDS = 0.5;          // how much the noise clouds add/remove
-  const MOUSE_RADIUS = 30;     // in cells
-  const MOUSE_BOOST = 0.35;
+  const CELL = 8;              // px per dither cell (bigger = fewer, chunkier pixels)
+  const IMG_SRC = 'assets/hero-portrait.png?v=3';
+  const CLOUDS = 0.42;         // how much the noise clouds add/remove
+  const MOUSE_RADIUS = 20;     // in cells
+  const MOUSE_BOOST = 0.4;
 
   const off = document.createElement('canvas');
   const octx = off.getContext('2d');
@@ -46,7 +46,7 @@
     const c = document.createElement('canvas');
     c.width = cols; c.height = rows;
     const cx = c.getContext('2d');
-    const s = (rows / img.height) * 0.82;   // 0.82 = slightly zoomed out
+    const s = (rows / img.height) * 0.70;   // 0.70 = more zoomed out
     const dw = img.width * s, dh = img.height * s;
     cx.drawImage(img, cols - dw, rows - dh, dw, dh);
     const d = cx.getImageData(0, 0, cols, rows).data;
@@ -88,8 +88,8 @@
         const cloud = noise(x * 0.045 + t * 3, y * 0.045 + t * 1.6) * 0.55 +
                       noise(x * 0.014 - t * 2, y * 0.014 + t * 0.6) * 0.45;
         // ambient dark cloud everywhere; the portrait adds brightness on top
-        let v = (cloud - 0.5) * CLOUDS + 0.06;
-        if (lum) v += lum[i] * 0.9 * alph[i];
+        let v = (cloud - 0.5) * CLOUDS + 0.02;
+        if (lum) v += lum[i] * 0.95 * alph[i];
 
         const dx = x - mx, dy = y - my;
         const d2 = dx * dx + dy * dy;
@@ -99,11 +99,13 @@
 
         if (x < dimL) v *= 0.5 + 0.5 * (x / dimL);
 
-        // ordered-dither texture, then map to a dark palette.
-        // Every cell is drawn (opaque) so the page background never shows.
-        v += ((BAYER[(y & 3) * 4 + (x & 3)] + 0.5) / 16 - 0.5) * 0.14;
-        const vv = v < 0 ? 0 : v > 1 ? 1 : v;
-        const g = Math.round(12 + vv * 150);   // floor 12, max ~162 (no bright whites)
+        // gamma curve pushes mid-tones darker, leaving more black zones
+        const vc = v < 0 ? 0 : v > 1 ? 1 : v;
+        let vv = Math.pow(vc, 1.7);
+        // ordered-dither texture, then map to a dark palette (opaque every cell)
+        vv += ((BAYER[(y & 3) * 4 + (x & 3)] + 0.5) / 16 - 0.5) * 0.12;
+        vv = vv < 0 ? 0 : vv > 1 ? 1 : vv;
+        const g = Math.round(9 + vv * 152);   // floor 9, max ~161 (no bright whites)
         d[i * 4] = g; d[i * 4 + 1] = g; d[i * 4 + 2] = g + 4; d[i * 4 + 3] = 255;
       }
     }
