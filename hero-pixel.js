@@ -10,7 +10,7 @@
   const ctx = canvas.getContext('2d');
 
   const CELL = 5;              // px per dither cell
-  const IMG_SRC = 'assets/hero-portrait.png';
+  const IMG_SRC = 'assets/hero-portrait.png?v=2';
   const CLOUDS = 0.5;          // how much the noise clouds add/remove
   const MOUSE_RADIUS = 30;     // in cells
   const MOUSE_BOOST = 0.35;
