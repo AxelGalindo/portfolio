@@ -41,14 +41,14 @@
   }
 
   // Sample the portrait into per-cell luminance/alpha.
-  // Fits the photo to the hero height and anchors it to the right edge.
+  // Zoomed out a touch and anchored to the bottom-right of the hero.
   function sample() {
     const c = document.createElement('canvas');
     c.width = cols; c.height = rows;
     const cx = c.getContext('2d');
-    const s = rows / img.height;
-    const dw = img.width * s, dh = rows;
-    cx.drawImage(img, cols - dw, 0, dw, dh);
+    const s = (rows / img.height) * 0.82;   // 0.82 = slightly zoomed out
+    const dw = img.width * s, dh = img.height * s;
+    cx.drawImage(img, cols - dw, rows - dh, dw, dh);
     const d = cx.getImageData(0, 0, cols, rows).data;
     lum = new Float32Array(cols * rows);
     alph = new Float32Array(cols * rows);
@@ -80,16 +80,16 @@
     const rct = canvas.getBoundingClientRect();
     const mx = (mouse.x - rct.left) / CELL;
     const my = (mouse.y - rct.top) / CELL;
-    const dimL = cols * 0.45;    // clouds stay subtle behind the headline
-    const fadeB = rows * 0.18;   // blend into the next section below
+    const dimL = cols * 0.42;    // clouds stay subtle behind the headline
 
     for (let y = 0; y < rows; y++) {
       for (let x = 0; x < cols; x++) {
         const i = y * cols + x;
         const cloud = noise(x * 0.045 + t * 3, y * 0.045 + t * 1.6) * 0.55 +
                       noise(x * 0.014 - t * 2, y * 0.014 + t * 0.6) * 0.45;
-        let v = lum ? lum[i] * 0.85 * alph[i] : 0;
-        v += (cloud - 0.5) * CLOUDS;
+        // ambient dark cloud everywhere; the portrait adds brightness on top
+        let v = (cloud - 0.5) * CLOUDS + 0.06;
+        if (lum) v += lum[i] * 0.9 * alph[i];
 
         const dx = x - mx, dy = y - my;
         const d2 = dx * dx + dy * dy;
@@ -97,14 +97,14 @@
           v += (1 - Math.sqrt(d2) / MOUSE_RADIUS) * MOUSE_BOOST;
         }
 
-        if (x < dimL) v *= 0.45 + 0.55 * (x / dimL);
-        if (y > rows - fadeB) v *= (rows - y) / fadeB;
+        if (x < dimL) v *= 0.5 + 0.5 * (x / dimL);
 
-        const th = (BAYER[(y & 3) * 4 + (x & 3)] + 0.5) / 16;
-        if (v > th) {
-          const g = v > th + 0.45 ? 208 : v > th + 0.2 ? 142 : 84;
-          d[i * 4] = g; d[i * 4 + 1] = g; d[i * 4 + 2] = g + 3; d[i * 4 + 3] = 255;
-        }
+        // ordered-dither texture, then map to a dark palette.
+        // Every cell is drawn (opaque) so the page background never shows.
+        v += ((BAYER[(y & 3) * 4 + (x & 3)] + 0.5) / 16 - 0.5) * 0.14;
+        const vv = v < 0 ? 0 : v > 1 ? 1 : v;
+        const g = Math.round(12 + vv * 150);   // floor 12, max ~162 (no bright whites)
+        d[i * 4] = g; d[i * 4 + 1] = g; d[i * 4 + 2] = g + 4; d[i * 4 + 3] = 255;
       }
     }
     octx.putImageData(id, 0, 0);
