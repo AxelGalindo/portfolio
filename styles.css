@@ -48,6 +48,15 @@ body {
   opacity: 0.035;
 }
 
+/* Case-study hero glow: fade the orb colour out softly so it never ends in a
+   hard horizontal seam where the section is clipped. */
+.case-glow {
+  overflow: visible !important;
+  -webkit-mask-image: radial-gradient(135% 90% at 50% 15%, #000 35%, transparent 82%);
+  mask-image: radial-gradient(135% 90% at 50% 15%, #000 35%, transparent 82%);
+}
+.case-glow .orb { filter: blur(110px); opacity: 0.75; }
+
 /* Hero orbs */
 .orb { position: absolute; border-radius: 50%; filter: blur(80px); will-change: transform, opacity; }
 .orb-violet { background: radial-gradient(circle, rgba(139, 92, 246, 0.55) 0%, transparent 70%); animation: drift-a 18s ease-in-out infinite alternate; }
