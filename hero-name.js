@@ -1,8 +1,13 @@
 /* Variable-weight hero name (mauriciojuba.com-style).
    Each letter of the name is wrapped in its own span; as the cursor moves,
-   nearby letters grow HEAVIER only (Manrope 'wght' axis) with a smooth
-   distance falloff, easing back to the base weight. No size/scale change —
-   the letters get bolder, never bigger. Vanilla JS, no deps. */
+   nearby letters grow HEAVIER only, easing back to the base weight. No
+   size/scale change — the letters get bolder, never bigger.
+
+   Weight is driven through the standard `font-weight` property (Manrope is a
+   variable font, so any value 1-1000 maps to its 'wght' axis). This is more
+   widely/reliably repainted than the low-level `font-variation-settings`,
+   which some Chromium-based browsers (e.g. Opera GX) fail to redraw when the
+   element is promoted with `will-change`. Vanilla JS, no deps. */
 (function () {
   const names = document.querySelectorAll('[data-hero-name]');
   if (!names.length) return;
@@ -26,8 +31,7 @@
       span.setAttribute('aria-hidden', 'true');
       span.textContent = c === ' ' ? ' ' : c;
       span.style.display = 'inline-block';
-      span.style.fontVariationSettings = `'wght' ${BASE}`;
-      span.style.willChange = 'font-variation-settings';
+      span.style.fontWeight = String(BASE);
       name.appendChild(span);
       if (c !== ' ') chars.push({ el: span, w: BASE });
     }
@@ -49,7 +53,7 @@
       const target = BASE + (MAX - BASE) * (f * f);
       ch.w += (target - ch.w) * EASE;
       if (Math.abs(target - ch.w) > 0.5) active = true;
-      ch.el.style.fontVariationSettings = `'wght' ${Math.round(ch.w)}`;
+      ch.el.style.fontWeight = String(Math.round(ch.w));
     }
     raf = active ? requestAnimationFrame(frame) : null;
   }
