@@ -172,13 +172,13 @@
         <div class="orb orb-pink"   style="width: 420px; height: 420px; bottom: -15%; left: 30%;"></div>
       </div>
 
-      <!-- Source video (hidden behind the canvas, used only as the live source) -->
-      <video id="heroVideo" class="pointer-events-none absolute inset-0 h-full w-full object-cover [image-rendering:pixelated] opacity-60 md:opacity-100" autoplay muted loop playsinline aria-hidden="true">
-        <source src="hero-video.mp4?v=2" type="video/mp4" />
+      <!-- Hero video, shown crisp (no pixelation) -->
+      <video id="heroVideo" class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-70 md:opacity-100" autoplay muted loop playsinline aria-hidden="true">
+        <source src="hero-video2.mp4?v=1" type="video/mp4" />
       </video>
 
-      <!-- Chromatic glitch: reads the video live and splits RGB near the cursor -->
-      <canvas id="heroChroma" class="pointer-events-none absolute inset-0 h-full w-full [image-rendering:pixelated]" aria-hidden="true"></canvas>
+      <!-- Chromatic glitch overlay: RGB split only around the cursor -->
+      <canvas id="heroChroma" class="pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
 
       <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a0a0b]"></div>
 
@@ -693,7 +693,7 @@
   </script>
 <script src="dots.js?v=2"></script>
 <script src="hero-name.js?v=1"></script>
-<script src="hero-chroma.js?v=1"></script>
+<script src="hero-chroma.js?v=4"></script>
 <script src="ui.js?v=5"></script>
 <script src="i18n.js?v=5"></script>
 </body>

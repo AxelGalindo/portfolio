@@ -339,10 +339,16 @@ body {
 }
 
 .metric-card {
-  border: 1px solid var(--border);
   border-radius: 14px;
   padding: 24px;
-  background: rgba(255, 255, 255, 0.015);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 45%, rgba(255, 255, 255, 0.045) 100%);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04),
+    0 20px 40px -24px rgba(0, 0, 0, 0.55);
 }
 .metric-card .metric-value {
   font-family: 'Manrope', sans-serif;
