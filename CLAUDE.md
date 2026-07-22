@@ -35,7 +35,7 @@ Portfolio profesional de Axel Galindo Dalaisón (UX/UI Designer & Design Lead, R
 - Commits: mensajes cortos y descriptivos en inglés (ej: `Add Qira screenshots`, `Fix mobile nav spacing`).
 
 ## Pendientes conocidos
-1. Reemplazar placeholders de screenshots (Qira: formato 9:16 mobile; Helios: 16:10 web) — Axel tiene capturas de ambos.
+1. Screenshots: ~~Qira~~ hecho (4 pantallas reales de Behance en `assets/qira-*.jpg` + `qira-cover.jpg`). Tapas de work cards (Qira/Helios/Radium) hechas. Helios case study cover hecho (brand book). PENDIENTE: las 4 pantallas internas de la app Helios (coach dashboard, open positions, CV analysis, position detail) siguen en "Coming soon" — están detrás del login, Axel las tiene que pasar.
 2. ~~Reemplazar el círculo "AG" del About~~ Hecho: avatar 3D de Axel con gato (`assets/axel-cat.png`, PNG transparente).
 3. Agregar Open Graph tags + favicon + sitemap.xml.
 4. ~~Comprar y conectar dominio~~ Hecho (2026-07-09): producción en https://www.axelgalindo.com (Namecheap + Vercel, el apex redirige a www).
