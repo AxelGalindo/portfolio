@@ -305,7 +305,9 @@
      'En una empresa con foco en ingeniería, el diseño se gana su lugar lanzando. Aprendí a diseñar con la implementación en mente, una mentalidad que después fue la base de mi rol de Design Lead.'],
     ['Process as a product', 'El proceso como producto'],
     ['Contributing to org-wide design standards showed me that how a team designs matters as much as what it designs.',
-     'Contribuir a los estándares de diseño de toda la organización me mostró que cómo diseña un equipo importa tanto como qué diseña.']
+     'Contribuir a los estándares de diseño de toda la organización me mostró que cómo diseña un equipo importa tanto como qué diseña.'],
+    ['Beyond the design work, I mentored the team\'s junior designers, guiding them on craft, standards and process as they grew in their roles.',
+     'Además del diseño, fui mentor de los diseñadores junior del equipo, guiándolos en oficio, estándares y proceso a medida que crecían en sus roles.']
   ];
 
   const norm = s => s.replace(/\s+/g, ' ').trim();
