@@ -322,11 +322,12 @@ body {
   font-size: 10px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--ink-faint);
-  background: rgba(10, 10, 11, 0.7);
-  padding: 4px 8px;
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(10, 10, 11, 0.82);
+  padding: 5px 9px;
   border-radius: 4px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 /* Frame holding a real screenshot: drop the frosted placeholder treatment */
 .screenshot-frame.has-img { background: #0a0a0b; }
