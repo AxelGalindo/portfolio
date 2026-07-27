@@ -72,12 +72,16 @@
      'Una extensión del<br><span class="italic-serif">propio equipo</span> del cliente.'],
     ['As UX/UI Designer, I worked embedded in that model: designing for <span style="color: var(--ink);">multiple clients and products</span>, collaborating daily with product managers, developers and stakeholders across different industries and codebases.',
      'Como UX/UI Designer trabajé embebido en ese modelo: diseñando para <span style="color: var(--ink);">múltiples clientes y productos</span>, colaborando a diario con product managers, desarrolladores y stakeholders de distintas industrias y bases de código.'],
-    ['<span style="color: var(--ink);">A note on confidentiality:</span> client projects at Radium Rocket are covered by NDAs, so I can\'t share screens publicly. I\'m happy to walk through selected work, process artifacts and outcomes in a conversation. Just ask.',
-     '<span style="color: var(--ink);">Una nota sobre confidencialidad:</span> los proyectos de clientes en Radium Rocket están cubiertos por acuerdos de confidencialidad (NDA), así que no puedo compartir pantallas públicamente. Con gusto repaso trabajos seleccionados, artefactos de proceso y resultados en una conversación. Solo pedilo.'],
+    ['<span style="color: var(--ink);">A note on confidentiality:</span> most client projects at Radium Rocket are covered by NDAs, so I can\'t show every screen publicly. I\'m happy to walk through selected work, process artifacts and outcomes in a conversation. Just ask.',
+     '<span style="color: var(--ink);">Una nota sobre confidencialidad:</span> la mayoría de los proyectos de clientes en Radium Rocket están cubiertos por acuerdos de confidencialidad (NDA), así que no puedo mostrar cada pantalla públicamente. Con gusto repaso trabajos seleccionados, artefactos de proceso y resultados en una conversación. Solo pedilo.'],
     ['Concept to <span class="italic-serif">implementation</span>.',
      'Del concepto a la <span class="italic-serif">implementación</span>.'],
     ['What the agency<br>years <span class="italic-serif">taught me</span>.',
-     'Lo que los años de<br>agencia <span class="italic-serif">me enseñaron</span>.']
+     'Lo que los años de<br>agencia <span class="italic-serif">me enseñaron</span>.'],
+    ['I led the UX/UI design for Qira Pagos as part of the <a href="radium-rocket.html" class="underline hover:text-white transition-colors" style="color: var(--ink);">Radium Rocket</a> team, for the agribusiness company <a href="https://www.alz-agro.com.ar" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition-colors" style="color: var(--ink);">ALZ Agro</a>. I worked closely with product and engineering to translate a complex financial domain into a mobile experience that felt straightforward and trustworthy.',
+     'Lideré el diseño UX/UI de Qira Pagos como parte del equipo de <a href="radium-rocket.html" class="underline hover:text-white transition-colors" style="color: var(--ink);">Radium Rocket</a>, para la empresa del agro <a href="https://www.alz-agro.com.ar" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition-colors" style="color: var(--ink);">ALZ Agro</a>. Trabajé codo a codo con producto e ingeniería para traducir un dominio financiero complejo en una experiencia mobile simple y confiable.'],
+    ['Among the clients I designed for was <a href="https://www.alz-agro.com.ar" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition-colors" style="color: var(--ink);">ALZ Agro</a>, the agribusiness company behind <a href="qira-pagos.html" class="underline hover:text-white transition-colors" style="color: var(--ink);">Qira Pagos</a> and <a href="https://www.qiraglobal.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition-colors" style="color: var(--ink);">Qira Global</a>, both of which I designed. For <a href="https://www.syngenta.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition-colors" style="color: var(--ink);">Syngenta</a>, I produced 3D video editing for VR experiences. My work also spanned other industries, including health, e-commerce, ERP and education.',
+     'Entre los clientes para los que diseñé estuvo <a href="https://www.alz-agro.com.ar" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition-colors" style="color: var(--ink);">ALZ Agro</a>, la empresa del agro detrás de <a href="qira-pagos.html" class="underline hover:text-white transition-colors" style="color: var(--ink);">Qira Pagos</a> y <a href="https://www.qiraglobal.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition-colors" style="color: var(--ink);">Qira Global</a>, ambos diseñados por mí. Para <a href="https://www.syngenta.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition-colors" style="color: var(--ink);">Syngenta</a> produje edición de video 3D para experiencias de VR. Mi trabajo también abarcó otros rubros, como salud, e-commerce, ERP y educación.'],
   ];
 
   const TEXT = [
@@ -202,10 +206,8 @@
     ['Ecosystem integration', 'Integración con el ecosistema'],
     ['The wallet had to plug into the broader QIRA platform and its network of affiliated businesses.',
      'La billetera tenía que conectarse con la plataforma QIRA y su red de comercios adheridos.'],
-    ['Full case study available on request. Includes flows, wireframes and design system.',
-     'Case study completo disponible a pedido. Incluye flujos, wireframes y design system.'],
-    ['I led the UX/UI design for Qira Pagos, working closely with product and engineering to translate a complex financial domain into a mobile experience that felt straightforward and trustworthy.',
-     'Lideré el diseño UX/UI de Qira Pagos, trabajando codo a codo con producto e ingeniería para traducir un dominio financiero complejo en una experiencia mobile simple y confiable.'],
+    ['View the full case study on Behance', 'Ver el caso de estudio completo en Behance'],
+    ['Flows, wireframes and design system.', 'Flujos, wireframes y design system.'],
     ['User interviews with producers and operators to understand real transaction patterns.',
      'Entrevistas con productores y operadores para entender patrones reales de transacción.'],
     ['Mapping dual-currency flows: payments, transfers, grain exchange and history.',
