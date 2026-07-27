@@ -1,7 +1,7 @@
 /* Variable-weight hero name (mauriciojuba.com-style).
    Each letter of the name is wrapped in its own span; as the cursor moves,
    nearby letters grow HEAVIER only, easing back to the base weight. No
-   size/scale change — the letters get bolder, never bigger.
+   size/scale change; the letters get bolder, never bigger.
 
    Weight is driven through the standard `font-weight` property (Manrope is a
    variable font, so any value 1-1000 maps to its 'wght' axis). This is more
