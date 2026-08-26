@@ -81,6 +81,12 @@
         radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.55) 0%, transparent 55%),
         linear-gradient(135deg, #1a0b1f 0%, #160b24 100%);
     }
+    .cover-newsreadeck {
+      background:
+        radial-gradient(ellipse at 25% 30%, rgba(0, 112, 243, 0.6) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 75%, rgba(255, 51, 88, 0.35) 0%, transparent 55%),
+        linear-gradient(135deg, #12131a 0%, #0c0d13 100%);
+    }
 
     .project-cover::before {
       content: ''; position: absolute; inset: 0;
@@ -250,7 +256,7 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 
           <!-- Project 1: Helios -->
           <article class="project-card reveal" style="transition-delay: 0.05s;">
@@ -309,8 +315,36 @@
             </a>
           </article>
 
-          <!-- Project 3: Radium Rocket -->
-          <article class="project-card reveal md:col-span-2" style="transition-delay: 0.25s;">
+          <!-- Project 3: Newsreadeck -->
+          <article class="project-card reveal" style="transition-delay: 0.25s;">
+            <a href="/newsreadeck" class="block" aria-label="Read Newsreadeck case study">
+              <div class="project-cover cover-newsreadeck">
+                <span class="cover-label">Newsreadeck</span>
+              </div>
+              <div class="p-6 md:p-7">
+                <div class="flex items-center justify-between gap-4 mb-4">
+                  <p class="mono text-[11px] tracking-wider uppercase" style="color: var(--ink-faint);">News · Mobile App</p>
+                  <span class="mono text-[11px]" style="color: var(--ink-faint);">2023</span>
+                </div>
+                <h3 class="font-display text-2xl md:text-3xl mb-3">Newsreadeck</h3>
+                <p class="text-[15px] leading-relaxed mb-6" style="color: var(--ink-muted);">
+                  UX/UI design for a free iOS news reader: every source you follow in one calm, distraction-free reading space.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span class="chip">Figma</span>
+                  <span class="chip">UX/UI</span>
+                  <span class="chip">iOS</span>
+                </div>
+                <span class="inline-flex items-center gap-2 text-sm group" style="color: var(--ink);">
+                  Read case study
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-0.5 transition-transform" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Project 4: Radium Rocket -->
+          <article class="project-card reveal md:col-span-3" style="transition-delay: 0.35s;">
             <a href="/radium-rocket" class="block" aria-label="Read Radium Rocket experience">
               <div class="project-cover" style="aspect-ratio: 21 / 9;">
                 <img src="assets/radium-cover.jpg" alt="Radium Rocket" class="absolute inset-0 w-full h-full object-cover" />
@@ -708,6 +742,6 @@
 <script src="hero-name.js?v=5"></script>
 <script src="hero-chroma.js?v=4"></script>
 <script src="ui.js?v=5"></script>
-<script src="i18n.js?v=9"></script>
+<script src="i18n.js?v=10"></script>
 </body>
 </html>
