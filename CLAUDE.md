@@ -7,6 +7,7 @@ Portfolio profesional de Axel Galindo Dalaisón (UX/UI Designer & Design Lead, R
 - `index.html` — Landing principal: Hero, Selected Work (3 cards), Design Process, Experience, Skills, About, Contact.
 - `qira-pagos.html` — Case study: billetera fintech del agro argentino (dinero + granos), rol UX/UI Designer, 2024, mobile iOS/Android.
 - `helios.html` — Case study estrella: plataforma de reclutamiento con IA (Bubble.io + OpenAI). Axel fue UX/UI Designer y luego Design Lead. Incluye el brand system real de Helios.
+- `newsreadeck.html` — Case study: app iOS gratuita de lectura de noticias (lectura sin distracciones, escuchar noticias, sync, sin registro obligatorio). Rol UX/UI Designer, 2023, cliente vía Radium Rocket, diseñada en Figma. App pública (newsreadeck.app + App Store). Screens todavía en placeholders.
 - `radium-rocket.html` — Página de experiencia (no case study): 2+ años como UX/UI Designer en agencia. Los proyectos están bajo NDA — nunca inventar clientes ni screens.
 - `styles.css` — Design system compartido por todas las páginas. Cualquier cambio de tokens/estilos globales va acá, NO duplicado en los HTML. Se referencia con `?v=N` (cache busting): al cambiarlo, subir el número en las 4 páginas.
 - `dots.js` — Fondo interactivo de puntitos (canvas) + pintado de secciones claras con transición gradiente.
@@ -35,7 +36,7 @@ Portfolio profesional de Axel Galindo Dalaisón (UX/UI Designer & Design Lead, R
 - Commits: mensajes cortos y descriptivos en inglés (ej: `Add Qira screenshots`, `Fix mobile nav spacing`).
 
 ## Pendientes conocidos
-1. Screenshots: ~~Qira~~ hecho (4 pantallas reales de Behance en `assets/qira-*.jpg` + `qira-cover.jpg`). Tapas de work cards (Qira/Helios/Radium) hechas. Helios case study cover hecho (brand book). PENDIENTE: las 4 pantallas internas de la app Helios (coach dashboard, open positions, CV analysis, position detail) siguen en "Coming soon" — están detrás del login, Axel las tiene que pasar.
+1. Screenshots: ~~Qira~~ hecho (4 pantallas reales de Behance en `assets/qira-*.jpg` + `qira-cover.jpg`). PENDIENTE Newsreadeck: tapa `assets/newsreadeck-cover.jpg` + 4 pantallas `assets/newsreadeck-1..4.jpg` (Axel las tiene que pasar desde Figma; hoy están en placeholders). Tapas de work cards (Qira/Helios/Radium) hechas. Helios case study cover hecho (brand book). PENDIENTE: las 4 pantallas internas de la app Helios (coach dashboard, open positions, CV analysis, position detail) siguen en "Coming soon" — están detrás del login, Axel las tiene que pasar.
 2. ~~Reemplazar el círculo "AG" del About~~ Hecho: avatar 3D de Axel con gato (`assets/axel-cat.png`, PNG transparente).
 3. Agregar Open Graph tags + favicon + sitemap.xml.
 4. ~~Comprar y conectar dominio~~ Hecho (2026-07-09): producción en https://www.axelgalindo.com (Namecheap + Vercel, el apex redirige a www).
