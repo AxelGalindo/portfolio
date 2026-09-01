@@ -28,6 +28,13 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css?v=12" />
+
+  <!-- Newsreadeck case-study accent: coral/red instead of the site violet -->
+  <style>
+    :root { --accent: #fc3556; }
+    .orb-violet { background: radial-gradient(circle, rgba(252, 53, 86, 0.5) 0%, transparent 70%); }
+    ::selection { background: rgba(252, 53, 86, 0.35); color: #fff; }
+  </style>
 </head>
 
 <body class="relative overflow-x-hidden">
@@ -96,10 +103,23 @@
     </section>
 
 
-    <!-- ============================================ HERO COVER ============================================ -->
+    <!-- ============================================ APP STORE BANNER ============================================ -->
     <section class="relative mb-16 md:mb-32">
       <div class="max-w-6xl mx-auto px-6 md:px-10">
-        <img src="assets/newsreadeck-cover.jpg" alt="Newsreadeck landing page: all the news you desire in one place" class="reveal w-full rounded-2xl border border-[var(--border)]" />
+        <a href="https://apps.apple.com/us/app/newsreadeck-ai-news-reader/id1593025917" target="_blank" rel="noopener noreferrer" class="reveal group block rounded-2xl overflow-hidden border border-[var(--border)] relative" aria-label="Download Newsreadeck on the App Store">
+          <div class="absolute inset-0" style="background: radial-gradient(ellipse at 12% 15%, rgba(252,53,86,0.35) 0%, transparent 55%), radial-gradient(ellipse at 88% 85%, rgba(34,211,238,0.16) 0%, transparent 55%), linear-gradient(135deg,#151016 0%,#0b0b10 100%);" aria-hidden="true"></div>
+          <div class="relative px-7 py-9 md:px-12 md:py-12 flex flex-col md:flex-row md:items-center gap-7 md:gap-10">
+            <div class="flex-1">
+              <p class="eyebrow" style="color: var(--accent);">Available now</p>
+              <h3 class="mt-3 font-display text-2xl md:text-4xl">Get Newsreadeck for iPhone</h3>
+              <p class="mt-3 text-[15px] md:text-base max-w-xl" style="color: var(--ink-muted);">Free and ad-free. Follow any newspaper, magazine or portal, read without distractions, and listen on the go.</p>
+            </div>
+            <span class="btn btn-primary shrink-0 group-hover:-translate-y-0.5 transition-transform">
+              <svg width="16" height="16" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              Download on the App Store
+            </span>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -203,10 +223,9 @@
           <p class="text-lg leading-relaxed max-w-3xl mb-8" style="color: var(--ink-muted);">
             The core of the product: a source profile that collects an outlet's latest stories, and a <span class="italic-serif" style="color: var(--ink);">distraction-free</span> reader that strips each article down to just the text.
           </p>
-          <img src="assets/newsreadeck-source.jpg" alt="Newsreadeck source profile page showing an outlet's latest news" class="w-full rounded-xl border border-[var(--border)]" />
-          <div class="grid md:grid-cols-2 gap-4 md:gap-6 mt-4 md:mt-6 items-start">
+          <div class="grid md:grid-cols-2 gap-4 md:gap-6 items-start">
+            <img src="assets/newsreadeck-source.jpg" alt="Newsreadeck source profile page showing an outlet's latest news" class="w-full rounded-xl border border-[var(--border)]" />
             <img src="assets/newsreadeck-article.jpg" alt="Newsreadeck distraction-free article reader" class="w-full rounded-xl border border-[var(--border)]" />
-            <img src="assets/newsreadeck-article-2.jpg" alt="Newsreadeck distraction-free article reader, second example" class="w-full rounded-xl border border-[var(--border)]" />
           </div>
         </div>
 
@@ -414,6 +433,6 @@
   </script>
 <script src="dots.js?v=2"></script>
 <script src="ui.js?v=5"></script>
-<script src="i18n.js?v=11"></script>
+<script src="i18n.js?v=12"></script>
 </body>
 </html>
